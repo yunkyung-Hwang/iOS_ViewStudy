@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UpsideViewScroll: UIViewController {
     @IBOutlet weak var movingView: UIView!
     @IBOutlet weak var viewIndicator: UIView!
     @IBOutlet weak var movingViewHeight: NSLayoutConstraint!
