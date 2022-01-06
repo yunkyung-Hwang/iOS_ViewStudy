@@ -89,14 +89,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="jMc-Qu-IDK">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jMc-Qu-IDK" id="TXe-gy-odX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO6-ul-T4i">
-                                                    <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="eas-CP-Ujv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="285-2w-q4x"/>
                             <constraint firstItem="U5f-64-zru" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="EuN-8t-D8F"/>
@@ -131,7 +131,7 @@
                     <connections>
                         <outlet property="categoryBarView" destination="aVv-cD-3T7" id="fij-qV-AYx"/>
                         <outlet property="customNaviBar" destination="eas-CP-Ujv" id="m4X-Ay-DPz"/>
-                        <outlet property="tabBarTopAnchor" destination="kTe-IU-B2o" id="7rt-30-pb5"/>
+                        <outlet property="tabBarTopAnchor" destination="kTe-IU-B2o" id="34q-2y-27g"/>
                         <outlet property="tableView" destination="U5f-64-zru" id="gxh-iT-G3t"/>
                     </connections>
                 </viewController>

@@ -33,19 +33,23 @@ extension NavigationBarFadeAnimation: UITableViewDataSource {
 }
 
 extension NavigationBarFadeAnimation: UITableViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if(velocity.y>0) {
-            UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.tabBarTopAnchor.constant = 0
-                self.categoryBarView.layoutIfNeeded()
-                self.customNaviBar.isHidden = true
-            }, completion: nil)
-        } else {
-            UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.tabBarTopAnchor.constant = 70
-                self.categoryBarView.layoutIfNeeded()
-                self.customNaviBar.isHidden = false
-            }, completion: nil)
-        }
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+       if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+           self.tabBarTopAnchor.constant = 0
+           
+           UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions(), animations: {
+               self.customNaviBar.layer.opacity = 0
+               self.view.layoutIfNeeded()
+               
+           }, completion: nil)
+
+       } else {
+           self.tabBarTopAnchor.constant = 70
+           
+           UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions(), animations: {
+               self.customNaviBar.layer.opacity = 1
+               self.view.layoutIfNeeded()
+           }, completion: nil)
+       }
     }
 }
