@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
+		23750005278C398A0005C558 /* DragCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750004278C398A0005C558 /* DragCollectionView.swift */; };
+		23750007278C39940005C558 /* DragCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23750006278C39940005C558 /* DragCollectionView.storyboard */; };
+		23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750008278C459A0005C558 /* DragCollectionViewCell.swift */; };
 		2376C23B2786D3C700EBE329 /* ProfileImageWithGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376C23A2786D3C700EBE329 /* ProfileImageWithGallery.swift */; };
 		2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376C23C2786D42D00EBE329 /* ProfileImageWithGallery.storyboard */; };
 		238A3C9D277E14530009A5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A3C9C277E14530009A5C9 /* AppDelegate.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
+		23750004278C398A0005C558 /* DragCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionView.swift; sourceTree = "<group>"; };
+		23750006278C39940005C558 /* DragCollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DragCollectionView.storyboard; sourceTree = "<group>"; };
+		23750008278C459A0005C558 /* DragCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionViewCell.swift; sourceTree = "<group>"; };
 		2376C23A2786D3C700EBE329 /* ProfileImageWithGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageWithGallery.swift; sourceTree = "<group>"; };
 		2376C23C2786D42D00EBE329 /* ProfileImageWithGallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileImageWithGallery.storyboard; sourceTree = "<group>"; };
 		238A3C99277E14530009A5C9 /* iOS_ViewStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_ViewStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +58,16 @@
 			path = NavigationBarFadeAnimation;
 			sourceTree = "<group>";
 		};
+		23750003278C39780005C558 /* DragCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				23750004278C398A0005C558 /* DragCollectionView.swift */,
+				23750006278C39940005C558 /* DragCollectionView.storyboard */,
+				23750008278C459A0005C558 /* DragCollectionViewCell.swift */,
+			);
+			path = DragCollectionView;
+			sourceTree = "<group>";
+		};
 		2376C2392786D35300EBE329 /* ProfileImageWithGallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +96,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23750003278C39780005C558 /* DragCollectionView */,
 				2376C2392786D35300EBE329 /* ProfileImageWithGallery */,
 				2330A7C6277E280200097A6A /* NavigationBarFadeAnimation */,
 				238A3CB1277E147D0009A5C9 /* UpsideViewScroll */,
@@ -169,6 +186,7 @@
 				238A3CA9277E14530009A5C9 /* LaunchScreen.storyboard in Resources */,
 				2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */,
 				238A3CA6277E14530009A5C9 /* Assets.xcassets in Resources */,
+				23750007278C39940005C558 /* DragCollectionView.storyboard in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
 			);
@@ -182,8 +200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2376C23B2786D3C700EBE329 /* ProfileImageWithGallery.swift in Sources */,
+				23750005278C398A0005C558 /* DragCollectionView.swift in Sources */,
 				2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */,
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
+				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
 				238A3C9D277E14530009A5C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,11 +353,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U2Z5Z44P4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ViewStudy/Supports/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = ProfileImageWithGallery;
+				INFOPLIST_KEY_UIMainStoryboardFile = DragCollectionView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,11 +382,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U2Z5Z44P4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ViewStudy/Supports/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = ProfileImageWithGallery;
+				INFOPLIST_KEY_UIMainStoryboardFile = DragCollectionView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
