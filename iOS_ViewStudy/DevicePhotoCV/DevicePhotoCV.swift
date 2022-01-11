@@ -6,6 +6,7 @@
 //
 
 //  참고: https://medium.com/@miraskarazhigitov/swiftly-over-the-photokit-f8d36a2df405
+//  참고2: https://github.com/chublix/CustomImagePicker-Example/blob/master/CustomImagePicker/ImagePickerVC.swift
 
 import UIKit
 import Photos
@@ -21,37 +22,28 @@ class DevicePhotoCV: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        
         fetchAssets()
+        setImageView([0,0])
     }
     
     func fetchAssets() {
         devicePhotos = PHAsset.fetchAssets(with: .ascendingOptions)
     }
     
-//    // 사진첩에 접근 허용하고 바로 로드하도록
-//    func requestAuthorization() {
-//        PHPhotoLibrary.requestAuthorization { (status) in
-//            switch status {
-//            case .notDetermined:
-//                PHPhotoLibrary.requestAuthorization() { status in
-//                    if status == .authorized {
-//                        DispatchQueue.main.async {
-//                            self.fetchAssets()
-//                            self.collectionView.reloadData()
-//                        }
-//                    }
-//                }
-//            case .authorized:
-//                DispatchQueue.main.async {
-//                    self.fetchAssets()
-//                    self.collectionView.reloadData()
-//                }
-//            default:
-//                break
-//            }
-//        }
-//    }
+    func setImageView(_ indexPath: IndexPath) {
+        let width = imageView.frame.width
+        let height = imageView.frame.height
+        
+        let options = PHImageRequestOptions()
+        options.deliveryMode = .highQualityFormat
+        options.resizeMode = .exact
+        
+        PHImageManager.default().requestImage(for: devicePhotos.object(at: indexPath.row), targetSize: CGSize(width: width, height: height), contentMode: .aspectFit, options: options) { (image, _) in
+            if image != nil {
+                self.imageView.image = image
+            }
+        }
+    }
 }
 
 //MARK: UICollectionViewDataSource
@@ -69,7 +61,6 @@ extension DevicePhotoCV: UICollectionViewDataSource {
         
         imageManager.requestImage(for: asset, targetSize: cell.frame.size, contentMode: .aspectFill, options: nil) { (image, _) in
             cell.backgroundView = UIImageView(image: image)
-//            cell.imageView = UIImageView(image: image)
         }
         
         return cell
@@ -80,11 +71,8 @@ extension DevicePhotoCV: UICollectionViewDataSource {
 //MARK: UICollectionViewDelegate
 extension DevicePhotoCV: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! DevicePhotoCVC
         
-        print(cell.backgroundView?.largeContentImage?.imageWithoutBaseline())
-        imageView.image = cell.backgroundView?.largeContentImage?.imageWithoutBaseline()
-//        view.
+        setImageView(indexPath)
     }
 }
 
