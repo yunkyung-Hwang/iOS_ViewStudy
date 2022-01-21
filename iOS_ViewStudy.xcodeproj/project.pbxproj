@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231A97D6279B030A00143845 /* DeleteCellByMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A97D5279B030A00143845 /* DeleteCellByMenuVC.swift */; };
+		231A97D8279B032100143845 /* DeleteCellByUIMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231A97D7279B032100143845 /* DeleteCellByUIMenu.storyboard */; };
+		23295D16279B08540097AEC8 /* DeleteTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* DeleteTVC.swift */; };
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
 		23750005278C398A0005C558 /* DragCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750004278C398A0005C558 /* DragCollectionView.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		0DF7911C188C0895B3A1A444 /* Pods-iOS_ViewStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ViewStudy.debug.xcconfig"; path = "Target Support Files/Pods-iOS_ViewStudy/Pods-iOS_ViewStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		231A97D5279B030A00143845 /* DeleteCellByMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCellByMenuVC.swift; sourceTree = "<group>"; };
+		231A97D7279B032100143845 /* DeleteCellByUIMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeleteCellByUIMenu.storyboard; sourceTree = "<group>"; };
+		23295D15279B08540097AEC8 /* DeleteTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTVC.swift; sourceTree = "<group>"; };
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
 		23750004278C398A0005C558 /* DragCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionView.swift; sourceTree = "<group>"; };
@@ -70,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231A97D4279B02AC00143845 /* DeleteCellByUIMenu */ = {
+			isa = PBXGroup;
+			children = (
+				231A97D5279B030A00143845 /* DeleteCellByMenuVC.swift */,
+				231A97D7279B032100143845 /* DeleteCellByUIMenu.storyboard */,
+				23295D15279B08540097AEC8 /* DeleteTVC.swift */,
+			);
+			path = DeleteCellByUIMenu;
+			sourceTree = "<group>";
+		};
 		2330A7C6277E280200097A6A /* NavigationBarFadeAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +145,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				231A97D4279B02AC00143845 /* DeleteCellByUIMenu */,
 				23934D3B27906320007857D3 /* SideMenu */,
 				2375000A278C62460005C558 /* DevicePhotoCV */,
 				23750003278C39780005C558 /* DragCollectionView */,
@@ -250,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2375000E278C62E00005C558 /* DevicePhotoCV.storyboard in Resources */,
+				231A97D8279B032100143845 /* DeleteCellByUIMenu.storyboard in Resources */,
 				238A3CA9277E14530009A5C9 /* LaunchScreen.storyboard in Resources */,
 				2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */,
 				238A3CA6277E14530009A5C9 /* Assets.xcassets in Resources */,
@@ -317,6 +335,8 @@
 				2375000C278C62C80005C558 /* DevicePhotoCV.swift in Sources */,
 				23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */,
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
+				23295D16279B08540097AEC8 /* DeleteTVC.swift in Sources */,
+				231A97D6279B030A00143845 /* DeleteCellByMenuVC.swift in Sources */,
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
 				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
@@ -476,7 +496,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = BaseView;
+				INFOPLIST_KEY_UIMainStoryboardFile = DeleteCellByUIMenu;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,7 +526,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = BaseView;
+				INFOPLIST_KEY_UIMainStoryboardFile = DeleteCellByUIMenu;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
