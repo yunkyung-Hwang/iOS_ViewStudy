@@ -17,6 +17,13 @@ class MenuBtnVC: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteCell), name: NSNotification.Name(rawValue: "cellDelete"), object: nil)
+    }
+    
+    @objc func deleteCell(_ notification: NSNotification) {
+        let indexPath = notification.object as! Int
+        print(indexPath)
     }
 }
 
@@ -28,6 +35,7 @@ extension MenuBtnVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuBtnTVC
         cell.textField.text = DataArr[indexPath.row]
+        cell.indexPath = indexPath.row
         
         return cell
     }

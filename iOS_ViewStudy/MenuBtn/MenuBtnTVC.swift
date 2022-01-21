@@ -11,6 +11,8 @@ class MenuBtnTVC: UITableViewCell {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
     
+    var indexPath: Int!
+    
     var menuItems: [UIAction] {
         return [
             UIAction(title: "수정",
@@ -24,7 +26,6 @@ class MenuBtnTVC: UITableViewCell {
     }
     var menu: UIMenu {
         return UIMenu(title: "",
-                      image: UIImage(systemName: "MoreBtn"),
                       identifier: nil,
                       options: [],
                       children: menuItems)
@@ -44,5 +45,6 @@ class MenuBtnTVC: UITableViewCell {
     
     func deleteCell() {
         print("delete")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cellDelete"), object: indexPath)
     }
 }
