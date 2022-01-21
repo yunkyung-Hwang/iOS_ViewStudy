@@ -7,18 +7,19 @@
 
 import UIKit
 
-class DeleteTVC: UITableViewCell {
+class MenuBtnTVC: UITableViewCell {
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
     
     var menuItems: [UIAction] {
         return [
             UIAction(title: "수정",
                      image: UIImage(systemName: "pencil"),
-                     handler: { _ in print("수정")}),
+                     handler: { [self] _ in editText()}),
             UIAction(title: "삭제",
                      image: UIImage(systemName: "trash"),
                      attributes: .destructive,
-                     handler: { _ in print("삭제")})
+                     handler: { [self] _ in deleteCell()})
         ]
     }
     var menu: UIMenu {
@@ -35,5 +36,13 @@ class DeleteTVC: UITableViewCell {
         button.menu = menu
         // 길게 안눌러도 바로 메뉴 나오게
         button.showsMenuAsPrimaryAction = true
+    }
+    
+    func editText() {
+        print("edit")
+    }
+    
+    func deleteCell() {
+        print("delete")
     }
 }
