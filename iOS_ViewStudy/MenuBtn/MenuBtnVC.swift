@@ -8,7 +8,7 @@
 import UIKit
 
 class MenuBtnVC: UIViewController {
-    let DataArr = ["a","bb","ccc","dddd"]
+    var DataArr = ["a","bb","ccc","dddd"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,8 +22,13 @@ class MenuBtnVC: UIViewController {
     }
     
     @objc func deleteCell(_ notification: NSNotification) {
-        let indexPath = notification.object as! Int
-        print(indexPath)
+        let indexPath = notification.object as! IndexPath
+        
+        // 순서 중요!
+        DataArr.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        tableView.reloadData()
     }
 }
 
@@ -35,7 +40,7 @@ extension MenuBtnVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuBtnTVC
         cell.textField.text = DataArr[indexPath.row]
-        cell.indexPath = indexPath.row
+        cell.indexPath = indexPath
         
         return cell
     }

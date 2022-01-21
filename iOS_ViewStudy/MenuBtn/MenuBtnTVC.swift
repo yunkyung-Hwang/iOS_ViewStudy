@@ -11,7 +11,7 @@ class MenuBtnTVC: UITableViewCell {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
     
-    var indexPath: Int!
+    var indexPath: IndexPath!
     
     var menuItems: [UIAction] {
         return [
