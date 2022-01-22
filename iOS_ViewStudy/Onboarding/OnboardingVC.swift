@@ -93,6 +93,7 @@ class OnboardingVC: UIViewController {
     }
     @objc func didTapButton(_ button: UIButton) {
         guard button.tag < 5 else {
+            dismiss(animated: true, completion: nil)
             return
         }
         
