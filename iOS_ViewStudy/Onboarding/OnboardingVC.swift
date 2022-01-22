@@ -46,6 +46,9 @@ class OnboardingVC: UIViewController {
         nextBtn.tintColor = .white
         nextBtn.layer.cornerRadius = nextBtn.frame.height / 2
         nextBtn.setTitle("다음", for: .normal)
+        
+        nextBtn.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        nextBtn.tag = 1
     }
     
     func configure() {
@@ -88,10 +91,32 @@ class OnboardingVC: UIViewController {
             pageView.addSubview(imageView)
         }
     }
+    @objc func didTapButton(_ button: UIButton) {
+        guard button.tag < 5 else {
+            return
+        }
+        
+        if button.tag == 4{
+            let btnTitle = NSAttributedString(string: "시작하기")
+            button.setAttributedTitle(btnTitle, for: .normal)
+        }
+        scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
+    }
 }
 extension OnboardingVC: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentIndex = Int(scrollView.contentOffset.x / UIScreen.main.bounds.width)
         pageController.currentPage = currentIndex
+        nextBtn.tag = pageController.currentPage + 1
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if nextBtn.tag == 4 {
+            let btnTitle = NSAttributedString(string: "시작하기")
+            nextBtn.setAttributedTitle(btnTitle, for: .normal)
+        } else {
+            let btnTitle = NSAttributedString(string: "다음")
+            nextBtn.setAttributedTitle(btnTitle, for: .normal)
+        }
     }
 }
