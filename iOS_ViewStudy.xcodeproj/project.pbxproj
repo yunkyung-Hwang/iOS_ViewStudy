@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23190FBF279C1727000F96DF /* TransformViewToImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23190FBE279C1727000F96DF /* TransformViewToImageVC.swift */; };
+		23190FC1279C173B000F96DF /* TransformViewToImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23190FC0279C173B000F96DF /* TransformViewToImage.storyboard */; };
 		231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A97D5279B030A00143845 /* MenuBtnVC.swift */; };
 		231A97D8279B032100143845 /* MenuBtn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231A97D7279B032100143845 /* MenuBtn.storyboard */; };
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		0DF7911C188C0895B3A1A444 /* Pods-iOS_ViewStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ViewStudy.debug.xcconfig"; path = "Target Support Files/Pods-iOS_ViewStudy/Pods-iOS_ViewStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		23190FBE279C1727000F96DF /* TransformViewToImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformViewToImageVC.swift; sourceTree = "<group>"; };
+		23190FC0279C173B000F96DF /* TransformViewToImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransformViewToImage.storyboard; sourceTree = "<group>"; };
 		231A97D5279B030A00143845 /* MenuBtnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnVC.swift; sourceTree = "<group>"; };
 		231A97D7279B032100143845 /* MenuBtn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuBtn.storyboard; sourceTree = "<group>"; };
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23190FBD279C16EF000F96DF /* TransformViewToImage */ = {
+			isa = PBXGroup;
+			children = (
+				23190FBE279C1727000F96DF /* TransformViewToImageVC.swift */,
+				23190FC0279C173B000F96DF /* TransformViewToImage.storyboard */,
+			);
+			path = TransformViewToImage;
+			sourceTree = "<group>";
+		};
 		231A97D4279B02AC00143845 /* MenuBtn */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23190FBD279C16EF000F96DF /* TransformViewToImage */,
 				231A97D4279B02AC00143845 /* MenuBtn */,
 				23934D3B27906320007857D3 /* SideMenu */,
 				2375000A278C62460005C558 /* DevicePhotoCV */,
@@ -276,6 +290,7 @@
 				23750007278C39940005C558 /* DragCollectionView.storyboard in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
+				23190FC1279C173B000F96DF /* TransformViewToImage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +349,7 @@
 				23934D3D2790632F007857D3 /* SideMenu.swift in Sources */,
 				2375000C278C62C80005C558 /* DevicePhotoCV.swift in Sources */,
 				23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */,
+				23190FBF279C1727000F96DF /* TransformViewToImageVC.swift in Sources */,
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
 				23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */,
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
@@ -493,10 +509,11 @@
 				DEVELOPMENT_TEAM = U2Z5Z44P4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ViewStudy/Supports/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MenuBtn;
+				INFOPLIST_KEY_UIMainStoryboardFile = TransformViewToImage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,10 +540,11 @@
 				DEVELOPMENT_TEAM = U2Z5Z44P4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ViewStudy/Supports/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MenuBtn;
+				INFOPLIST_KEY_UIMainStoryboardFile = TransformViewToImage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
