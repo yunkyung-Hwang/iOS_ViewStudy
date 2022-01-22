@@ -11,6 +11,8 @@
 		23190FC1279C173B000F96DF /* TransformViewToImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23190FC0279C173B000F96DF /* TransformViewToImage.storyboard */; };
 		23190FC4279C5512000F96DF /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23190FC3279C5512000F96DF /* OnboardingVC.swift */; };
 		23190FC6279C5522000F96DF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23190FC5279C5522000F96DF /* Onboarding.storyboard */; };
+		23190FC8279C623E000F96DF /* OnboardingBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23190FC7279C623E000F96DF /* OnboardingBaseVC.swift */; };
+		23190FCA279C624A000F96DF /* OnboardingBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23190FC9279C624A000F96DF /* OnboardingBase.storyboard */; };
 		231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A97D5279B030A00143845 /* MenuBtnVC.swift */; };
 		231A97D8279B032100143845 /* MenuBtn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231A97D7279B032100143845 /* MenuBtn.storyboard */; };
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
@@ -43,6 +45,8 @@
 		23190FC0279C173B000F96DF /* TransformViewToImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransformViewToImage.storyboard; sourceTree = "<group>"; };
 		23190FC3279C5512000F96DF /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		23190FC5279C5522000F96DF /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		23190FC7279C623E000F96DF /* OnboardingBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBaseVC.swift; sourceTree = "<group>"; };
+		23190FC9279C624A000F96DF /* OnboardingBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingBase.storyboard; sourceTree = "<group>"; };
 		231A97D5279B030A00143845 /* MenuBtnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnVC.swift; sourceTree = "<group>"; };
 		231A97D7279B032100143845 /* MenuBtn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuBtn.storyboard; sourceTree = "<group>"; };
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 			children = (
 				23190FC3279C5512000F96DF /* OnboardingVC.swift */,
 				23190FC5279C5522000F96DF /* Onboarding.storyboard */,
+				23190FC7279C623E000F96DF /* OnboardingBaseVC.swift */,
+				23190FC9279C624A000F96DF /* OnboardingBase.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				231A97D8279B032100143845 /* MenuBtn.storyboard in Resources */,
 				238A3CA9277E14530009A5C9 /* LaunchScreen.storyboard in Resources */,
 				23190FC6279C5522000F96DF /* Onboarding.storyboard in Resources */,
+				23190FCA279C624A000F96DF /* OnboardingBase.storyboard in Resources */,
 				2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */,
 				238A3CA6277E14530009A5C9 /* Assets.xcassets in Resources */,
 				23934D432790665A007857D3 /* BaseView.storyboard in Resources */,
@@ -366,6 +373,7 @@
 				23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */,
 				23190FBF279C1727000F96DF /* TransformViewToImageVC.swift in Sources */,
 				23190FC4279C5512000F96DF /* OnboardingVC.swift in Sources */,
+				23190FC8279C623E000F96DF /* OnboardingBaseVC.swift in Sources */,
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
 				23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */,
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
@@ -529,7 +537,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Onboarding;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnboardingBase;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -560,7 +568,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Onboarding;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnboardingBase;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
