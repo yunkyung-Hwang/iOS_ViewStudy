@@ -25,14 +25,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjv-ka-VC9">
-                                <rect key="frame" x="338.5" y="88.5" width="55.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="saveViewToImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pdb-rw-uaW"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-QH-HRj">
                                 <rect key="frame" x="0.0" y="130" width="414" height="836"/>
                                 <subviews>
@@ -88,15 +80,33 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="y89-jU-wgf"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="U5d-DU-0V3"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKI-Ih-Xrn">
+                                <rect key="frame" x="351.5" y="88.5" width="42.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="shareImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="asG-gu-f5O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-rn-oS5">
+                                <rect key="frame" x="299.5" y="88.5" width="43" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fay-FF-dgy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UM0-Jw-gJx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="42" id="1gG-a4-Plc"/>
-                            <constraint firstItem="Gjv-ka-VC9" firstAttribute="centerY" secondItem="UM0-Jw-gJx" secondAttribute="centerY" id="3E9-cx-1R7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gjv-ka-VC9" secondAttribute="trailing" constant="20" id="Yb6-9A-Jha"/>
+                            <constraint firstItem="yKI-Ih-Xrn" firstAttribute="centerY" secondItem="M9h-rn-oS5" secondAttribute="centerY" id="6oz-6v-vqI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yKI-Ih-Xrn" secondAttribute="trailing" constant="20" id="Azx-yk-nOz"/>
+                            <constraint firstItem="yKI-Ih-Xrn" firstAttribute="centerY" secondItem="UM0-Jw-gJx" secondAttribute="centerY" id="WwF-ia-cBx"/>
                             <constraint firstItem="LGb-QH-HRj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b4z-6z-Iq9"/>
                             <constraint firstItem="LGb-QH-HRj" firstAttribute="top" secondItem="UM0-Jw-gJx" secondAttribute="bottom" constant="8" symbolic="YES" id="cKH-Mo-kPy"/>
+                            <constraint firstItem="yKI-Ih-Xrn" firstAttribute="leading" secondItem="M9h-rn-oS5" secondAttribute="trailing" constant="9" id="dqm-qJ-yqu"/>
                             <constraint firstItem="UM0-Jw-gJx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nHq-Vb-hkR"/>
                             <constraint firstItem="LGb-QH-HRj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yDK-Yg-EZv"/>
                             <constraint firstItem="LGb-QH-HRj" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="zow-fL-Huy"/>
@@ -113,6 +123,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
