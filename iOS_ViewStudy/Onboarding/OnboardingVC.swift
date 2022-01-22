@@ -25,6 +25,8 @@ class OnboardingVC: UIViewController {
     }
     
     func setScrollView() {
+        scrollView.delegate = self
+        
         scrollView.frame = holderView.bounds
         scrollView.showsHorizontalScrollIndicator = false
         
@@ -85,5 +87,11 @@ class OnboardingVC: UIViewController {
             imageView.image = images[i]
             pageView.addSubview(imageView)
         }
+    }
+}
+extension OnboardingVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentIndex = Int(scrollView.contentOffset.x / UIScreen.main.bounds.width)
+        pageController.currentPage = currentIndex
     }
 }
