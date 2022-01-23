@@ -16,6 +16,7 @@ class CollectionViewBasicVC: UIViewController {
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 extension CollectionViewBasicVC: UICollectionViewDataSource {
@@ -29,5 +30,13 @@ extension CollectionViewBasicVC: UICollectionViewDataSource {
         cell.title.textColor = .white
         
         return cell
+    }
+}
+
+extension CollectionViewBasicVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellWidth = collectionView.frame.width / 3.2
+        
+        return CGSize(width: cellWidth, height: cellWidth)
     }
 }
