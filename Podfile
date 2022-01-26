@@ -7,5 +7,6 @@ target 'iOS_ViewStudy' do
 
   # Pods for iOS_ViewStudy
   pod 'SideMenu'
+  pod 'Alamofire'
 
 end
