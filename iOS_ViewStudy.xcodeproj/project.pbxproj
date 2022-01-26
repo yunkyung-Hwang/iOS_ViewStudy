@@ -39,6 +39,8 @@
 		239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0B4E279DA436000A2567 /* CollectionViewBasicVC.swift */; };
 		239A0B51279DA44A000A2567 /* CollectionViewBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239A0B50279DA44A000A2567 /* CollectionViewBasic.storyboard */; };
 		239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0B52279DA829000A2567 /* BasicCVC.swift */; };
+		23A261AA27A106880052D244 /* ByteCoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A261A927A106880052D244 /* ByteCoin.storyboard */; };
+		23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261AB27A106A00052D244 /* ByteCoinVC.swift */; };
 		87951F262246689A6C12D43C /* Pods_iOS_ViewStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3584C6B1CC9A263E18A4C945 /* Pods_iOS_ViewStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		239A0B4E279DA436000A2567 /* CollectionViewBasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicVC.swift; sourceTree = "<group>"; };
 		239A0B50279DA44A000A2567 /* CollectionViewBasic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewBasic.storyboard; sourceTree = "<group>"; };
 		239A0B52279DA829000A2567 /* BasicCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCVC.swift; sourceTree = "<group>"; };
+		23A261A927A106880052D244 /* ByteCoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByteCoin.storyboard; sourceTree = "<group>"; };
+		23A261AB27A106A00052D244 /* ByteCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteCoinVC.swift; sourceTree = "<group>"; };
 		3584C6B1CC9A263E18A4C945 /* Pods_iOS_ViewStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ViewStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0987B3D62142B084E58037B /* Pods-iOS_ViewStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ViewStudy.release.xcconfig"; path = "Target Support Files/Pods-iOS_ViewStudy/Pods-iOS_ViewStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +187,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23A261A527A106570052D244 /* ByteCoin */,
 				239A0B4D279DA417000A2567 /* CollectionViewBasic */,
 				23190FC2279C54E3000F96DF /* Onboarding */,
 				23190FBD279C16EF000F96DF /* TransformViewToImage */,
@@ -238,6 +243,39 @@
 				239A0B52279DA829000A2567 /* BasicCVC.swift */,
 			);
 			path = CollectionViewBasic;
+			sourceTree = "<group>";
+		};
+		23A261A527A106570052D244 /* ByteCoin */ = {
+			isa = PBXGroup;
+			children = (
+				23A261A727A106720052D244 /* Model */,
+				23A261A827A106790052D244 /* Controller */,
+				23A261A627A106690052D244 /* View */,
+			);
+			path = ByteCoin;
+			sourceTree = "<group>";
+		};
+		23A261A627A106690052D244 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23A261A927A106880052D244 /* ByteCoin.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23A261A727A106720052D244 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23A261A827A106790052D244 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23A261AB27A106A00052D244 /* ByteCoinVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		29D227604240368883188329 /* Frameworks */ = {
@@ -331,6 +369,7 @@
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
 				23190FC1279C173B000F96DF /* TransformViewToImage.storyboard in Resources */,
+				23A261AA27A106880052D244 /* ByteCoin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2376C23B2786D3C700EBE329 /* ProfileImageWithGallery.swift in Sources */,
+				23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */,
 				23750005278C398A0005C558 /* DragCollectionView.swift in Sources */,
 				2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */,
 				23934D3D2790632F007857D3 /* SideMenu.swift in Sources */,
@@ -557,7 +597,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CollectionViewBasic;
+				INFOPLIST_KEY_UIMainStoryboardFile = ByteCoin;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -588,7 +628,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = CollectionViewBasic;
+				INFOPLIST_KEY_UIMainStoryboardFile = ByteCoin;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
