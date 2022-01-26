@@ -23,6 +23,20 @@ class ByteCoinVC: UIViewController {
         currencyPicker.delegate = self
     }
 }
+//MARK: - CoinManagerDelegate
+extension ByteCoinVC: CoinManagerDelegate {
+    func didUpdatePrice(price: String, currency: String) {
+        DispatchQueue.main.async {
+            self.bitcoinLabel.text = price
+            self.currencyLabel.text = currency
+        }
+    }
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+}
+
+//MARK: - UIPickerViewDataSource - Base with CoinManager data
 extension ByteCoinVC: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -33,6 +47,8 @@ extension ByteCoinVC: UIPickerViewDataSource {
     }
     
 }
+
+//MARK: - UIPickerViewDelegate - Base with CoinManager data
 extension ByteCoinVC: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return coinManager.currencyArray[row]
@@ -41,16 +57,5 @@ extension ByteCoinVC: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedCurrency = coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: selectedCurrency)
-    }
-}
-extension ByteCoinVC: CoinManagerDelegate {
-    func didUpdatePrice(price: String, currency: String) {
-        DispatchQueue.main.async {
-            self.bitcoinLabel.text = price
-            self.currencyLabel.text = currency
-        }
-    }
-    func didFailWithError(error: Error) {
-        print(error)
     }
 }
