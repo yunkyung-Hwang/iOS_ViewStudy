@@ -29,22 +29,34 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ba-Xgm" customClass="ProfileHeaderView" customModule="iOS_ViewStudy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="zkC-ea-xHS"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-d5-7HE" customClass="CellFooterView" customModule="iOS_ViewStudy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="200" width="414" height="50"/>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Vrw-CU-ERk"/>
                                                     </constraints>
                                                 </view>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-cn-S0Q">
+                                                    <rect key="frame" x="20" y="58" width="374" height="134"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="NiM-Ba-Xgm" secondAttribute="trailing" id="0wu-PO-CID"/>
+                                                <constraint firstItem="YTN-cn-S0Q" firstAttribute="trailing" secondItem="d5T-iQ-Rbh" secondAttribute="trailingMargin" id="8uA-Uc-5VX"/>
+                                                <constraint firstItem="YTN-cn-S0Q" firstAttribute="top" secondItem="NiM-Ba-Xgm" secondAttribute="bottom" constant="8" symbolic="YES" id="Icq-8g-lfm"/>
+                                                <constraint firstItem="YTN-cn-S0Q" firstAttribute="leading" secondItem="d5T-iQ-Rbh" secondAttribute="leadingMargin" id="KDz-Ob-3Xm"/>
                                                 <constraint firstAttribute="bottom" secondItem="WBK-d5-7HE" secondAttribute="bottom" id="Roi-bU-GNb"/>
+                                                <constraint firstItem="WBK-d5-7HE" firstAttribute="top" secondItem="YTN-cn-S0Q" secondAttribute="bottom" constant="8" symbolic="YES" id="UEt-DL-SFW"/>
                                                 <constraint firstItem="NiM-Ba-Xgm" firstAttribute="top" secondItem="d5T-iQ-Rbh" secondAttribute="top" id="nhy-Pk-q63"/>
                                                 <constraint firstAttribute="trailing" secondItem="WBK-d5-7HE" secondAttribute="trailing" id="ouH-Tb-Pph"/>
                                                 <constraint firstItem="WBK-d5-7HE" firstAttribute="leading" secondItem="d5T-iQ-Rbh" secondAttribute="leading" id="rDY-6P-nK9"/>
@@ -54,6 +66,7 @@
                                         <connections>
                                             <outlet property="cellFooterView" destination="WBK-d5-7HE" id="zXD-jg-jgp"/>
                                             <outlet property="cellHeaderView" destination="NiM-Ba-Xgm" id="Xr2-Bs-tfX"/>
+                                            <outlet property="contents" destination="YTN-cn-S0Q" id="uzz-bv-zl3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,11 +110,11 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

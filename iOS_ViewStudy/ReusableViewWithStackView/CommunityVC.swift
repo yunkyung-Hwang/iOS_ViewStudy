@@ -34,12 +34,20 @@ extension CommunityVC: UITableViewDataSource {
         
         cell.cellFooterView.likeCnt.text = "\(10 + indexPath.row)"
         cell.cellFooterView.ChatCnt.text = "\(5 + indexPath.row)"
+        
+        if indexPath.row % 2 == 0 {
+            cell.contents.text = "내용 한 줄"
+        } else {
+            cell.contents.text =
+            "내\n용\n여\n러\n줄"
+        }
         return cell
     }
 }
 
 extension CommunityVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("asdf")
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

@@ -9,11 +9,16 @@ import UIKit
 
 class CommunityTVC: UITableViewCell {
     @IBOutlet weak var cellHeaderView: ProfileHeaderView!
+    @IBOutlet weak var contents: UITextView!
     @IBOutlet weak var cellFooterView: CellFooterView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        contents.isScrollEnabled = false
+        contents.isEditable = false
+        contents.isSelectable = false
+        contents.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
