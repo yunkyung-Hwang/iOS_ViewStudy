@@ -34,7 +34,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="zkC-ea-xHS"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-d5-7HE">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-d5-7HE" customClass="CellFooterView" customModule="iOS_ViewStudy" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="200" width="414" height="50"/>
                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     <constraints>
@@ -52,6 +52,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellFooterView" destination="WBK-d5-7HE" id="zXD-jg-jgp"/>
                                             <outlet property="cellHeaderView" destination="NiM-Ba-Xgm" id="Xr2-Bs-tfX"/>
                                         </connections>
                                     </tableViewCell>

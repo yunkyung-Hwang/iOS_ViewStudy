@@ -9,6 +9,7 @@ import UIKit
 
 class CommunityTVC: UITableViewCell {
     @IBOutlet weak var cellHeaderView: ProfileHeaderView!
+    @IBOutlet weak var cellFooterView: CellFooterView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
