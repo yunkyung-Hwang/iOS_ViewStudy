@@ -19,6 +19,8 @@
 		23247F9927A8FC32005B7578 /* CellFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23247F9827A8FC32005B7578 /* CellFooterView.xib */; };
 		23247F9B27A94B66005B7578 /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23247F9A27A94B66005B7578 /* CommunityVC.swift */; };
 		23247F9D27A94B72005B7578 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23247F9C27A94B72005B7578 /* Community.storyboard */; };
+		23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23247F9E27A94D36005B7578 /* ProfileHeaderView.swift */; };
+		23247FA127A94FE9005B7578 /* CommunityTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23247FA027A94FE9005B7578 /* CommunityTVC.swift */; };
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
@@ -64,6 +66,8 @@
 		23247F9827A8FC32005B7578 /* CellFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellFooterView.xib; sourceTree = "<group>"; };
 		23247F9A27A94B66005B7578 /* CommunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
 		23247F9C27A94B72005B7578 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
+		23247F9E27A94D36005B7578 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		23247FA027A94FE9005B7578 /* CommunityTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTVC.swift; sourceTree = "<group>"; };
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				23247F9C27A94B72005B7578 /* Community.storyboard */,
 				23247F9A27A94B66005B7578 /* CommunityVC.swift */,
 				23247F8727A8F559005B7578 /* ReuseableView */,
+				23247FA027A94FE9005B7578 /* CommunityTVC.swift */,
 			);
 			path = ReusableViewWithStackView;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			children = (
 				23247F9027A8F880005B7578 /* ProfileHeaderView.xib */,
 				23247F9827A8FC32005B7578 /* CellFooterView.xib */,
+				23247F9E27A94D36005B7578 /* ProfileHeaderView.swift */,
 			);
 			path = ReuseableView;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				23247F9B27A94B66005B7578 /* CommunityVC.swift in Sources */,
 				23750005278C398A0005C558 /* DragCollectionView.swift in Sources */,
 				2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */,
+				23247FA127A94FE9005B7578 /* CommunityTVC.swift in Sources */,
 				23934D3D2790632F007857D3 /* SideMenu.swift in Sources */,
 				2375000C278C62C80005C558 /* DevicePhotoCV.swift in Sources */,
 				23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */,
@@ -480,6 +487,7 @@
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
 				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
+				23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */,
 				238A3C9D277E14530009A5C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,7 +645,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = ByteCoin;
+				INFOPLIST_KEY_UIMainStoryboardFile = Community;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -668,7 +676,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = ByteCoin;
+				INFOPLIST_KEY_UIMainStoryboardFile = Community;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

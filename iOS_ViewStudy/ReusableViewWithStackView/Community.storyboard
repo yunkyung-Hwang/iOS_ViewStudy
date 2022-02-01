@@ -19,6 +19,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Tt-9R-ufw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommunityCell" rowHeight="250" id="fgb-4h-6ta" customClass="CommunityTVC" customModule="iOS_ViewStudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fgb-4h-6ta" id="d5T-iQ-Rbh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiM-Ba-Xgm" customClass="ProfileHeaderView" customModule="iOS_ViewStudy" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="zkC-ea-xHS"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-d5-7HE">
+                                                    <rect key="frame" x="0.0" y="200" width="414" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Vrw-CU-ERk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="NiM-Ba-Xgm" secondAttribute="trailing" id="0wu-PO-CID"/>
+                                                <constraint firstAttribute="bottom" secondItem="WBK-d5-7HE" secondAttribute="bottom" id="Roi-bU-GNb"/>
+                                                <constraint firstItem="NiM-Ba-Xgm" firstAttribute="top" secondItem="d5T-iQ-Rbh" secondAttribute="top" id="nhy-Pk-q63"/>
+                                                <constraint firstAttribute="trailing" secondItem="WBK-d5-7HE" secondAttribute="trailing" id="ouH-Tb-Pph"/>
+                                                <constraint firstItem="WBK-d5-7HE" firstAttribute="leading" secondItem="d5T-iQ-Rbh" secondAttribute="leading" id="rDY-6P-nK9"/>
+                                                <constraint firstItem="NiM-Ba-Xgm" firstAttribute="leading" secondItem="d5T-iQ-Rbh" secondAttribute="leading" id="w8O-5w-ibQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellHeaderView" destination="NiM-Ba-Xgm" id="Xr2-Bs-tfX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -31,6 +68,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fuj-wT-w3Y"/>
+                    <connections>
+                        <outlet property="tableView" destination="7Tt-9R-ufw" id="Q5Z-fN-Bmv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,6 +98,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
