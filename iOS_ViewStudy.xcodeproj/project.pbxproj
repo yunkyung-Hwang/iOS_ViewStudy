@@ -21,6 +21,7 @@
 		23247F9D27A94B72005B7578 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23247F9C27A94B72005B7578 /* Community.storyboard */; };
 		23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23247F9E27A94D36005B7578 /* ProfileHeaderView.swift */; };
 		23247FA127A94FE9005B7578 /* CommunityTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23247FA027A94FE9005B7578 /* CommunityTVC.swift */; };
+		23247FA327A95AAE005B7578 /* CellFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23247FA227A95AAE005B7578 /* CellFooterView.swift */; };
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
@@ -68,6 +69,7 @@
 		23247F9C27A94B72005B7578 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		23247F9E27A94D36005B7578 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		23247FA027A94FE9005B7578 /* CommunityTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTVC.swift; sourceTree = "<group>"; };
+		23247FA227A95AAE005B7578 /* CellFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFooterView.swift; sourceTree = "<group>"; };
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
@@ -159,8 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				23247F9027A8F880005B7578 /* ProfileHeaderView.xib */,
-				23247F9827A8FC32005B7578 /* CellFooterView.xib */,
 				23247F9E27A94D36005B7578 /* ProfileHeaderView.swift */,
+				23247F9827A8FC32005B7578 /* CellFooterView.xib */,
+				23247FA227A95AAE005B7578 /* CellFooterView.swift */,
 			);
 			path = ReuseableView;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
 				23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */,
 				239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */,
+				23247FA327A95AAE005B7578 /* CellFooterView.swift in Sources */,
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
