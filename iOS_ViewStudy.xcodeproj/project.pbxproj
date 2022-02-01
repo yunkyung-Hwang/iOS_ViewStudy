@@ -15,6 +15,7 @@
 		23190FCA279C624A000F96DF /* OnboardingBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23190FC9279C624A000F96DF /* OnboardingBase.storyboard */; };
 		231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A97D5279B030A00143845 /* MenuBtnVC.swift */; };
 		231A97D8279B032100143845 /* MenuBtn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231A97D7279B032100143845 /* MenuBtn.storyboard */; };
+		23247F9127A8F880005B7578 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23247F9027A8F880005B7578 /* ProfileHeaderView.xib */; };
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
@@ -56,6 +57,7 @@
 		23190FC9279C624A000F96DF /* OnboardingBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingBase.storyboard; sourceTree = "<group>"; };
 		231A97D5279B030A00143845 /* MenuBtnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnVC.swift; sourceTree = "<group>"; };
 		231A97D7279B032100143845 /* MenuBtn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuBtn.storyboard; sourceTree = "<group>"; };
+		23247F9027A8F880005B7578 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,22 @@
 			path = MenuBtn;
 			sourceTree = "<group>";
 		};
+		23247F8227A8F4C8005B7578 /* ReusableViewWithStackView */ = {
+			isa = PBXGroup;
+			children = (
+				23247F8727A8F559005B7578 /* ReuseableView */,
+			);
+			path = ReusableViewWithStackView;
+			sourceTree = "<group>";
+		};
+		23247F8727A8F559005B7578 /* ReuseableView */ = {
+			isa = PBXGroup;
+			children = (
+				23247F9027A8F880005B7578 /* ProfileHeaderView.xib */,
+			);
+			path = ReuseableView;
+			sourceTree = "<group>";
+		};
 		2330A7C6277E280200097A6A /* NavigationBarFadeAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +209,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23247F8227A8F4C8005B7578 /* ReusableViewWithStackView */,
 				23A261A527A106570052D244 /* ByteCoin */,
 				239A0B4D279DA417000A2567 /* CollectionViewBasic */,
 				23190FC2279C54E3000F96DF /* Onboarding */,
@@ -372,6 +391,7 @@
 				23934D432790665A007857D3 /* BaseView.storyboard in Resources */,
 				23934D3F27906339007857D3 /* SideMenu.storyboard in Resources */,
 				23750007278C39940005C558 /* DragCollectionView.storyboard in Resources */,
+				23247F9127A8F880005B7578 /* ProfileHeaderView.xib in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
 				23190FC1279C173B000F96DF /* TransformViewToImage.storyboard in Resources */,
