@@ -31,6 +31,9 @@ extension CommunityVC: UITableViewDataSource {
 //        cell.cellHeaderView.profileImg.image = UIImage(named: "person.circle.fill")
         cell.cellHeaderView.profileImg.image = UIImage(systemName: "person.circle.fill")
         cell.cellHeaderView.userName.text = "익명의 사용자"
+        
+        cell.cellFooterView.likeCnt.text = "\(10 + indexPath.row)"
+        cell.cellFooterView.ChatCnt.text = "\(5 + indexPath.row)"
         return cell
     }
 }
