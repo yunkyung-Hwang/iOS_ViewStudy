@@ -49,6 +49,8 @@
 		23A261AA27A106880052D244 /* ByteCoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A261A927A106880052D244 /* ByteCoin.storyboard */; };
 		23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261AB27A106A00052D244 /* ByteCoinVC.swift */; };
 		23A261B227A112EF0052D244 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261B127A112EF0052D244 /* CoinManager.swift */; };
+		23CB9EBA27ACEC1B00BC0F97 /* ButtonCustom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CB9EB927ACEC1B00BC0F97 /* ButtonCustom.storyboard */; };
+		23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB9EBB27ACEC3100BC0F97 /* ButtonCustomVC.swift */; };
 		23F0138C27A1488800C87399 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0138B27A1488800C87399 /* CoinData.swift */; };
 		87951F262246689A6C12D43C /* Pods_iOS_ViewStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3584C6B1CC9A263E18A4C945 /* Pods_iOS_ViewStudy.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +101,8 @@
 		23A261A927A106880052D244 /* ByteCoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByteCoin.storyboard; sourceTree = "<group>"; };
 		23A261AB27A106A00052D244 /* ByteCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteCoinVC.swift; sourceTree = "<group>"; };
 		23A261B127A112EF0052D244 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		23CB9EB927ACEC1B00BC0F97 /* ButtonCustom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ButtonCustom.storyboard; sourceTree = "<group>"; };
+		23CB9EBB27ACEC3100BC0F97 /* ButtonCustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCustomVC.swift; sourceTree = "<group>"; };
 		23F0138B27A1488800C87399 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		3584C6B1CC9A263E18A4C945 /* Pods_iOS_ViewStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ViewStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0987B3D62142B084E58037B /* Pods-iOS_ViewStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ViewStudy.release.xcconfig"; path = "Target Support Files/Pods-iOS_ViewStudy/Pods-iOS_ViewStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23CB9EB827ACEC0C00BC0F97 /* ButtonCustom */,
 				23247F8227A8F4C8005B7578 /* ReusableViewWithStackView */,
 				23A261A527A106570052D244 /* ByteCoin */,
 				239A0B4D279DA417000A2567 /* CollectionViewBasic */,
@@ -321,6 +326,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		23CB9EB827ACEC0C00BC0F97 /* ButtonCustom */ = {
+			isa = PBXGroup;
+			children = (
+				23CB9EB927ACEC1B00BC0F97 /* ButtonCustom.storyboard */,
+				23CB9EBB27ACEC3100BC0F97 /* ButtonCustomVC.swift */,
+			);
+			path = ButtonCustom;
+			sourceTree = "<group>";
+		};
 		29D227604240368883188329 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +425,7 @@
 				23934D3F27906339007857D3 /* SideMenu.storyboard in Resources */,
 				23750007278C39940005C558 /* DragCollectionView.storyboard in Resources */,
 				23247F9127A8F880005B7578 /* ProfileHeaderView.xib in Resources */,
+				23CB9EBA27ACEC1B00BC0F97 /* ButtonCustom.storyboard in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
 				23247F9927A8FC32005B7578 /* CellFooterView.xib in Resources */,
@@ -487,6 +502,7 @@
 				239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */,
 				23247FA327A95AAE005B7578 /* CellFooterView.swift in Sources */,
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
+				23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */,
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
@@ -649,7 +665,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Community;
+				INFOPLIST_KEY_UIMainStoryboardFile = ButtonCustom;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -680,7 +696,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Community;
+				INFOPLIST_KEY_UIMainStoryboardFile = ButtonCustom;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
