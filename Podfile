@@ -8,5 +8,6 @@ target 'iOS_ViewStudy' do
   # Pods for iOS_ViewStudy
   pod 'SideMenu'
   pod 'Alamofire'
+  pod 'Tabman', '~> 2.9'
 
 end
