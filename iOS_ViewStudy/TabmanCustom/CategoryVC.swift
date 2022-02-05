@@ -28,7 +28,7 @@ class CategoryVC: TabmanViewController {
     }
     
     func setCategoryIndicator() {
-        let bar = TMBar.ButtonBar()
+        let bar = TMBarView<TMHorizontalBarLayout, TabPagerButton, TMLineBarIndicator>()
         
         bar.backgroundView.style = .flat(color: .white)
         bar.layout.contentInset = UIEdgeInsets(top: 0.0,
@@ -36,8 +36,8 @@ class CategoryVC: TabmanViewController {
                                                bottom: 0.0,
                                                right: 16.0)
         bar.buttons.customize { (button) in
-            button.tintColor = .systemGray
-            button.selectedTintColor = .black
+            button.tintColor = .darkGray
+            button.selectedTintColor = .white
             
             button.layer.cornerRadius = 7
             button.contentInset = UIEdgeInsets(top: 0.0, left: 17.0, bottom: 0.0, right: 17.0)
@@ -82,5 +82,18 @@ extension CategoryVC: PageboyViewControllerDataSource {
     
     func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
         return nil
+    }
+}
+
+class TabPagerButton: Tabman.TMLabelBarButton {
+    override func update(for selectionState: TMBarButton.SelectionState) {
+        switch selectionState {
+            case .selected:
+                backgroundColor = .black
+            default:
+                backgroundColor = .systemGray6
+        }
+
+        super.update(for: selectionState)
     }
 }
