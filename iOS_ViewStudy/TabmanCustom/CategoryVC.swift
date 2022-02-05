@@ -12,7 +12,9 @@ import Pageboy
 class CategoryVC: TabmanViewController {
     @IBOutlet weak var categoryTB: UIView!
     
-    private var viewControllers: Array<UIViewController> = []
+    private let viewControllers = TypeOfViewController.communityCases.compactMap {
+        ViewControllerFactory.viewController(for: $0) as? PostFeedVC
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +24,6 @@ class CategoryVC: TabmanViewController {
     }
     
     func setCategoryPageDataSource() {
-        let allTab = ViewControllerFactory.viewController(for: .communityCategory) as! PostFeedVC
-        let tab1 = ViewControllerFactory.viewController(for: .communityCategory) as! PostFeedVC
-        let tab2 = ViewControllerFactory.viewController(for: .communityCategory) as! PostFeedVC
-        let tab3 = ViewControllerFactory.viewController(for: .communityCategory) as! PostFeedVC
-        let tab4 = ViewControllerFactory.viewController(for: .communityCategory) as! PostFeedVC
-        
-        viewControllers.append(allTab)
-        viewControllers.append(tab1)
-        viewControllers.append(tab2)
-        viewControllers.append(tab3)
-        viewControllers.append(tab4)
         self.dataSource = self
     }
     
