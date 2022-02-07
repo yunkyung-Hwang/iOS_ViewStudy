@@ -17,10 +17,14 @@ class StackViewWithScrollView: UIViewController {
         redView.backgroundColor = .red
         let blueView = UIView()
         blueView.backgroundColor = .blue
+        
+        let customView = ProfileHeaderView()
+        customView.awakeFromNib()
+        customView.userName.text = "asdf"
 
         redView.translatesAutoresizingMaskIntoConstraints = false
         blueView.translatesAutoresizingMaskIntoConstraints = false
-        let imageViews = [redView, blueView]
+        let imageViews = [redView, blueView, customView]
         
         let stackView = UIStackView(arrangedSubviews: imageViews)
         stackView.axis = .horizontal
@@ -35,6 +39,9 @@ class StackViewWithScrollView: UIViewController {
             
             blueView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
             blueView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            customView.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 1/4),
+            customView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
