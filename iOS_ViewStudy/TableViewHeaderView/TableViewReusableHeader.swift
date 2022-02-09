@@ -26,7 +26,8 @@ class TableViewReusableHeader: UITableViewHeaderFooterView {
     
     private func setContentView() {
         guard let view = loadViewFromNib(with: "TableViewReusableHeader") else { return }
-        view.backgroundColor = .clear
+        view.backgroundColor = .red
+        view.frame = bounds
         self.addSubview(view)
     }
 }
