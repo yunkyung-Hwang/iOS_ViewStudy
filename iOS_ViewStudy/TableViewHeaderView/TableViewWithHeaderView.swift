@@ -10,11 +10,22 @@ import UIKit
 class TableViewWithHeaderView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    let images: [UIImage] = [
+        UIImage(named: "test1")!,
+        UIImage(named: "test2")!,
+        UIImage(named: "test3")!
+    ]
+    
+    let text = "ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹ\nㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹ\nㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹ"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+//        tableView.estimatedSectionFooterHeight = 200
+//        tableView.sectionHeaderHeight = UITableView.automaticDimension
         
         tableView.register(TableViewReusableHeader.self, forHeaderFooterViewReuseIdentifier: "header")
     }
@@ -34,12 +45,21 @@ extension TableViewWithHeaderView: UITableViewDataSource {
 
 extension TableViewWithHeaderView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as! TableViewReusableHeader
+        headerView.image = images
+        headerView.setContentView()
+        headerView.textView.text = text
+        
+        headerView.profileHeaderView.userName.text = "yunkyung-Hwang"
         
         return headerView
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
