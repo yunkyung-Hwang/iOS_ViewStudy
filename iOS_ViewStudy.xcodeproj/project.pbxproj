@@ -48,6 +48,10 @@
 		239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0B4E279DA436000A2567 /* CollectionViewBasicVC.swift */; };
 		239A0B51279DA44A000A2567 /* CollectionViewBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239A0B50279DA44A000A2567 /* CollectionViewBasic.storyboard */; };
 		239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0B52279DA829000A2567 /* BasicCVC.swift */; };
+		239A445227B37DB900D99521 /* TableViewReusableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A445127B37DB900D99521 /* TableViewReusableHeader.swift */; };
+		239A445427B37DED00D99521 /* TableViewReusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239A445327B37DED00D99521 /* TableViewReusableHeader.xib */; };
+		239A445627B37F1900D99521 /* TableViewWithHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A445527B37F1800D99521 /* TableViewWithHeaderView.swift */; };
+		239A445827B37F2300D99521 /* TableViewWithHeaderView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239A445727B37F2300D99521 /* TableViewWithHeaderView.storyboard */; };
 		23A261AA27A106880052D244 /* ByteCoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A261A927A106880052D244 /* ByteCoin.storyboard */; };
 		23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261AB27A106A00052D244 /* ByteCoinVC.swift */; };
 		23A261B227A112EF0052D244 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261B127A112EF0052D244 /* CoinManager.swift */; };
@@ -107,6 +111,10 @@
 		239A0B4E279DA436000A2567 /* CollectionViewBasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicVC.swift; sourceTree = "<group>"; };
 		239A0B50279DA44A000A2567 /* CollectionViewBasic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewBasic.storyboard; sourceTree = "<group>"; };
 		239A0B52279DA829000A2567 /* BasicCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCVC.swift; sourceTree = "<group>"; };
+		239A445127B37DB900D99521 /* TableViewReusableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewReusableHeader.swift; sourceTree = "<group>"; };
+		239A445327B37DED00D99521 /* TableViewReusableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewReusableHeader.xib; sourceTree = "<group>"; };
+		239A445527B37F1800D99521 /* TableViewWithHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWithHeaderView.swift; sourceTree = "<group>"; };
+		239A445727B37F2300D99521 /* TableViewWithHeaderView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewWithHeaderView.storyboard; sourceTree = "<group>"; };
 		23A261A927A106880052D244 /* ByteCoin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByteCoin.storyboard; sourceTree = "<group>"; };
 		23A261AB27A106A00052D244 /* ByteCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteCoinVC.swift; sourceTree = "<group>"; };
 		23A261B127A112EF0052D244 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
@@ -266,6 +274,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				239A445027B37D6000D99521 /* TableViewHeaderView */,
 				2355FAE227B174ED00818E37 /* StackViewInsideScrollView */,
 				2364F10B27AEC11100EA9FFD /* TabmanCustom */,
 				23CB9EB827ACEC0C00BC0F97 /* ButtonCustom */,
@@ -326,6 +335,17 @@
 				239A0B52279DA829000A2567 /* BasicCVC.swift */,
 			);
 			path = CollectionViewBasic;
+			sourceTree = "<group>";
+		};
+		239A445027B37D6000D99521 /* TableViewHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				239A445127B37DB900D99521 /* TableViewReusableHeader.swift */,
+				239A445327B37DED00D99521 /* TableViewReusableHeader.xib */,
+				239A445527B37F1800D99521 /* TableViewWithHeaderView.swift */,
+				239A445727B37F2300D99521 /* TableViewWithHeaderView.storyboard */,
+			);
+			path = TableViewHeaderView;
 			sourceTree = "<group>";
 		};
 		23A261A527A106570052D244 /* ByteCoin */ = {
@@ -451,6 +471,7 @@
 			files = (
 				23CF06B027AEC16900E81F4C /* Category.storyboard in Resources */,
 				23247F9D27A94B72005B7578 /* Community.storyboard in Resources */,
+				239A445427B37DED00D99521 /* TableViewReusableHeader.xib in Resources */,
 				2375000E278C62E00005C558 /* DevicePhotoCV.storyboard in Resources */,
 				231A97D8279B032100143845 /* MenuBtn.storyboard in Resources */,
 				238A3CA9277E14530009A5C9 /* LaunchScreen.storyboard in Resources */,
@@ -468,6 +489,7 @@
 				23CB9EBA27ACEC1B00BC0F97 /* ButtonCustom.storyboard in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
+				239A445827B37F2300D99521 /* TableViewWithHeaderView.storyboard in Resources */,
 				23247F9927A8FC32005B7578 /* CellFooterView.xib in Resources */,
 				23190FC1279C173B000F96DF /* TransformViewToImage.storyboard in Resources */,
 				23A261AA27A106880052D244 /* ByteCoin.storyboard in Resources */,
@@ -530,6 +552,7 @@
 				23247F9B27A94B66005B7578 /* CommunityVC.swift in Sources */,
 				23750005278C398A0005C558 /* DragCollectionView.swift in Sources */,
 				2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */,
+				239A445227B37DB900D99521 /* TableViewReusableHeader.swift in Sources */,
 				2355FAE427B1751500818E37 /* StackViewWithScrollView.swift in Sources */,
 				23247FA127A94FE9005B7578 /* CommunityTVC.swift in Sources */,
 				23934D3D2790632F007857D3 /* SideMenu.swift in Sources */,
@@ -549,6 +572,7 @@
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
 				23CF06AE27AEC16200E81F4C /* CategoryVC.swift in Sources */,
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
+				239A445627B37F1900D99521 /* TableViewWithHeaderView.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
 				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
 				23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */,
@@ -709,7 +733,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = StackViewWithScrollView;
+				INFOPLIST_KEY_UIMainStoryboardFile = TableViewWithHeaderView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -740,7 +764,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = StackViewWithScrollView;
+				INFOPLIST_KEY_UIMainStoryboardFile = TableViewWithHeaderView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
