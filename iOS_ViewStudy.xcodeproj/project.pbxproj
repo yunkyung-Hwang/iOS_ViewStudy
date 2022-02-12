@@ -25,6 +25,10 @@
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
+		23552CB727B6528800550748 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23552CB627B6528800550748 /* PostModel.swift */; };
+		23552CB927B6529200550748 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23552CB827B6529200550748 /* PostManager.swift */; };
+		23552CBB27B6579D00550748 /* ITZZAAPITestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23552CBA27B6579D00550748 /* ITZZAAPITestVC.swift */; };
+		23552CBD27B657A700550748 /* ITZZAAPITest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23552CBC27B657A700550748 /* ITZZAAPITest.storyboard */; };
 		2355FAE427B1751500818E37 /* StackViewWithScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2355FAE327B1751500818E37 /* StackViewWithScrollView.swift */; };
 		2355FAE627B1751E00818E37 /* StackViewWithScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2355FAE527B1751E00818E37 /* StackViewWithScrollView.storyboard */; };
 		23750005278C398A0005C558 /* DragCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750004278C398A0005C558 /* DragCollectionView.swift */; };
@@ -86,6 +90,10 @@
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
+		23552CB627B6528800550748 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		23552CB827B6529200550748 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		23552CBA27B6579D00550748 /* ITZZAAPITestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITZZAAPITestVC.swift; sourceTree = "<group>"; };
+		23552CBC27B657A700550748 /* ITZZAAPITest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ITZZAAPITest.storyboard; sourceTree = "<group>"; };
 		2355FAE327B1751500818E37 /* StackViewWithScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewWithScrollView.swift; sourceTree = "<group>"; };
 		2355FAE527B1751E00818E37 /* StackViewWithScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackViewWithScrollView.storyboard; sourceTree = "<group>"; };
 		23750004278C398A0005C558 /* DragCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionView.swift; sourceTree = "<group>"; };
@@ -203,6 +211,41 @@
 			path = NavigationBarFadeAnimation;
 			sourceTree = "<group>";
 		};
+		23552CB227B6486400550748 /* ITZZAAPITest */ = {
+			isa = PBXGroup;
+			children = (
+				23552CB327B6493300550748 /* Model */,
+				23552CB427B6494300550748 /* Controller */,
+				23552CB527B6494B00550748 /* View */,
+			);
+			path = ITZZAAPITest;
+			sourceTree = "<group>";
+		};
+		23552CB327B6493300550748 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23552CB627B6528800550748 /* PostModel.swift */,
+				23552CB827B6529200550748 /* PostManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23552CB427B6494300550748 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23552CBA27B6579D00550748 /* ITZZAAPITestVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23552CB527B6494B00550748 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23552CBC27B657A700550748 /* ITZZAAPITest.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2355FAE227B174ED00818E37 /* StackViewInsideScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +317,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23552CB227B6486400550748 /* ITZZAAPITest */,
 				239A445027B37D6000D99521 /* TableViewHeaderView */,
 				2355FAE227B174ED00818E37 /* StackViewInsideScrollView */,
 				2364F10B27AEC11100EA9FFD /* TabmanCustom */,
@@ -487,6 +531,7 @@
 				23CF06B427AEC2C900E81F4C /* PostFeed.storyboard in Resources */,
 				23247F9127A8F880005B7578 /* ProfileHeaderView.xib in Resources */,
 				23CB9EBA27ACEC1B00BC0F97 /* ButtonCustom.storyboard in Resources */,
+				23552CBD27B657A700550748 /* ITZZAAPITest.storyboard in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
 				239A445827B37F2300D99521 /* TableViewWithHeaderView.storyboard in Resources */,
@@ -546,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F0138C27A1488800C87399 /* CoinData.swift in Sources */,
+				23552CB927B6529200550748 /* PostManager.swift in Sources */,
 				23A261B227A112EF0052D244 /* CoinManager.swift in Sources */,
 				2376C23B2786D3C700EBE329 /* ProfileImageWithGallery.swift in Sources */,
 				23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */,
@@ -570,12 +616,14 @@
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
 				23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */,
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
+				23552CBB27B6579D00550748 /* ITZZAAPITestVC.swift in Sources */,
 				23CF06AE27AEC16200E81F4C /* CategoryVC.swift in Sources */,
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
 				239A445627B37F1900D99521 /* TableViewWithHeaderView.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
 				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
 				23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */,
+				23552CB727B6528800550748 /* PostModel.swift in Sources */,
 				238A3C9D277E14530009A5C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +781,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TableViewWithHeaderView;
+				INFOPLIST_KEY_UIMainStoryboardFile = ITZZAAPITest;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -764,7 +812,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TableViewWithHeaderView;
+				INFOPLIST_KEY_UIMainStoryboardFile = ITZZAAPITest;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
