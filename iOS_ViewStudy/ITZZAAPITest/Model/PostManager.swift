@@ -9,40 +9,29 @@ import Foundation
 
 // delegate design pattern - reusable
 protocol PostManagerDelegate {
-    func didUpdatePost(_ postManager: PostManager, _ posts: [PostModel])
     func didFailWithError(_ error: Error)
 }
 
 struct PostManager {
-    let baseURL = "http://13.125.239.189:3000"
+    let baseURL = "http://13.125.239.189:3000/boards"
     var delegate: PostManagerDelegate?
     
-    func getPostModel() {
-        let urlString = "\(baseURL)/boards"
-        
-        guard let url = URL(string: urlString) else {
-            print("Error")
-            return
-        }
-        
+    func getPost(completion: @escaping ([PostModel]?) -> ()) {
+        guard let url = URL(string: baseURL) else { return }
+
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                if let posts = self.parseJSON(postData: data) {
-                    self.delegate?.didUpdatePost(self, posts)
+            if let error = error {
+                self.delegate?.didFailWithError(error)
+                completion(nil)
+            } else if let data = data {
+                let posts = try? JSONDecoder().decode([PostModel].self, from: data)
+                
+                if let posts = posts {
+                    completion(posts)
                 }
-            } 
+                
+            }
         }.resume()
-    }
-    
-    func parseJSON(postData: Data) -> [PostModel]? {
-        let decoder = JSONDecoder()
-        do {
-            let decodeData: [PostModel] = try decoder.decode([PostModel].self, from: postData)
-            return decodeData
-        } catch {
-            delegate?.didFailWithError(error)
-            return nil
-        }
     }
 }
 // TODO:
