@@ -20,7 +20,7 @@ class ITZZAAPITestVC: UIViewController {
 }
 
 extension ITZZAAPITestVC: PostManagerDelegate {
-    func didUpdatePost(posts: [PostModel]) {
+    func didUpdatePost(_ postManager: PostManager, _ posts: [PostModel]) {
         postList = posts
         postList?.forEach({ post in
             print("userId: ", post.userId ?? 0)
@@ -36,5 +36,10 @@ extension ITZZAAPITestVC: PostManagerDelegate {
             print("commentCnt: ", post.commentCnt ?? 0)
             print()
         })
+    }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
+        print("여기서 에러 처리")
     }
 }

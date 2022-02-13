@@ -9,7 +9,8 @@ import Foundation
 
 // delegate design pattern - reusable
 protocol PostManagerDelegate {
-    func didUpdatePost(posts: [PostModel])
+    func didUpdatePost(_ postManager: PostManager, _ posts: [PostModel])
+    func didFailWithError(_ error: Error)
 }
 
 struct PostManager {
@@ -17,7 +18,7 @@ struct PostManager {
     var delegate: PostManagerDelegate?
     
     func getPostModel() {
-        let urlString = "\(baseURL)/boards"
+        let urlString = "\(baseURL)/boardsa"
         
         guard let url = URL(string: urlString) else {
             print("Error")
@@ -27,9 +28,9 @@ struct PostManager {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let posts = self.parseJSON(postData: data) {
-                    self.delegate?.didUpdatePost(posts: posts)
+                    self.delegate?.didUpdatePost(self, posts)
                 }
-            }
+            } 
         }.resume()
     }
     
@@ -39,7 +40,7 @@ struct PostManager {
             let decodeData: [PostModel] = try decoder.decode([PostModel].self, from: postData)
             return decodeData
         } catch {
-            print(error)
+            delegate?.didFailWithError(error)
             return nil
         }
     }
@@ -49,3 +50,7 @@ struct PostManager {
 //2. create a url session
 //3. give the session a task
 //4. start the task
+
+//5. parseJSON
+//6. delegate Design pattern
+//7. method naming conventions and error handling
