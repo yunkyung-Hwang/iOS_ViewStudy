@@ -7,21 +7,15 @@
 
 import Foundation
 
-// delegate design pattern - reusable
-protocol PostManagerDelegate {
-    func didFailWithError(_ error: Error)
-}
-
 struct PostManager {
     let baseURL = "http://13.125.239.189:3000/boards"
-    var delegate: PostManagerDelegate?
     
     func getPost(completion: @escaping ([PostModel]?) -> ()) {
         guard let url = URL(string: baseURL) else { return }
 
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                self.delegate?.didFailWithError(error)
+                print(error)
                 completion(nil)
             } else if let data = data {
                 let posts = try? JSONDecoder().decode([PostModel].self, from: data)
@@ -29,6 +23,8 @@ struct PostManager {
                 if let posts = posts {
                     completion(posts)
                 }
+                
+                print(posts)
                 
             }
         }.resume()

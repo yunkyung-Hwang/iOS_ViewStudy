@@ -13,7 +13,7 @@ struct PostListVM {
 }
 
 extension PostListVM {
-    var numberOfSection: Int {
+    var numberOfSections: Int {
         return 1
     }
     
@@ -21,7 +21,7 @@ extension PostListVM {
         return self.posts.count
     }
     
-    func articleAtIndex(_ index: Int) -> PostVM {
+    func postAtIndex(_ index: Int) -> PostVM {
         let post = self.posts[index]
         return PostVM(post)
     }
