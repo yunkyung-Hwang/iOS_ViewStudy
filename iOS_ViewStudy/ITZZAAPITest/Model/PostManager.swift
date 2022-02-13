@@ -18,7 +18,7 @@ struct PostManager {
     var delegate: PostManagerDelegate?
     
     func getPostModel() {
-        let urlString = "\(baseURL)/boardsa"
+        let urlString = "\(baseURL)/boards"
         
         guard let url = URL(string: urlString) else {
             print("Error")

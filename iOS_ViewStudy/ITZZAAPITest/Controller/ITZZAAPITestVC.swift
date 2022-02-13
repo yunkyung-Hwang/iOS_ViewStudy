@@ -10,6 +10,7 @@ import UIKit
 class ITZZAAPITestVC: UIViewController {
     var postManager = PostManager()
     var postList: [PostModel]?
+    @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,15 @@ extension ITZZAAPITestVC: PostManagerDelegate {
             print("likeCnt: ", post.likeCnt ?? 0)
             print("commentCnt: ", post.commentCnt ?? 0)
             print()
+            
+            // UI변경은 항상 main thread 안에서! 아니면 앱 죽음
+            DispatchQueue.main.async {
+                self.textView.text = self.postList?[0].postTitle ?? ""
+                self.textView.text += "\n"
+                self.textView.text += self.postList?[0].postContent ?? ""
+                self.textView.text += "\n"
+                self.textView.text += self.postList?[0].createdAt ?? ""
+            }
         })
     }
     
