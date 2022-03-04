@@ -10,5 +10,6 @@ target 'iOS_ViewStudy' do
   pod 'Alamofire'
   pod 'Tabman', '~> 2.9'
   pod 'YPImagePicker'
+  pod 'SnapKit', '~> 5.0.0'
 
 end
