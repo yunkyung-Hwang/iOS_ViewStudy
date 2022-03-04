@@ -23,7 +23,7 @@ extension PostListVM {
     
     func postAtIndex(_ index: Int) -> PostVM {
         let post = self.posts[index]
-        return PostVM(post)
+        return PostVM(post) 
     }
 }
 
@@ -40,12 +40,12 @@ extension PostVM {
 }
 
 extension PostVM {
-    var nickName: String {
-        return self.post.nickName ?? ""
+    var nickname: String {
+        return self.post.nickname ?? ""
     }
     
     var profileImgURL: String {
-        return self.post.profileImgURL ?? ""
+        return self.post.profileImage ?? ""
     }
     
     var createAt: String {

@@ -9,5 +9,6 @@ target 'iOS_ViewStudy' do
   pod 'SideMenu'
   pod 'Alamofire'
   pod 'Tabman', '~> 2.9'
+  pod 'YPImagePicker'
 
 end

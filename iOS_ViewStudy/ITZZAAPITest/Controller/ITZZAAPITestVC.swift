@@ -52,7 +52,7 @@ extension ITZZAAPITestVC: UITableViewDataSource {
         cell.postTitle.text = postVM.postTitle
         cell.postContents.text = postVM.postContents
         cell.profileImgURL.text = postVM.profileImgURL
-        cell.nickName.text = postVM.nickName
+        cell.nickName.text = postVM.nickname
         cell.createAt.text = postVM.createAt
         
         return cell

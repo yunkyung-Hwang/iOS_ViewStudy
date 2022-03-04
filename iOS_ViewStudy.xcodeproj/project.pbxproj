@@ -25,6 +25,7 @@
 		23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23295D15279B08540097AEC8 /* MenuBtnTVC.swift */; };
 		2330A7C8277E284200097A6A /* NavigationBarFadeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */; };
 		2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */; };
+		234D0CF127CE9A7C00E48FC5 /* YPImagePickerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D0CF027CE9A7C00E48FC5 /* YPImagePickerTest.swift */; };
 		23552CB727B6528800550748 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23552CB627B6528800550748 /* PostModel.swift */; };
 		23552CB927B6529200550748 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23552CB827B6529200550748 /* PostManager.swift */; };
 		23552CBB27B6579D00550748 /* ITZZAAPITestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23552CBA27B6579D00550748 /* ITZZAAPITestVC.swift */; };
@@ -92,6 +93,7 @@
 		23295D15279B08540097AEC8 /* MenuBtnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBtnTVC.swift; sourceTree = "<group>"; };
 		2330A7C7277E284200097A6A /* NavigationBarFadeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFadeAnimation.swift; sourceTree = "<group>"; };
 		2330A7C9277E285000097A6A /* NavigationBarFadeAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBarFadeAnimation.storyboard; sourceTree = "<group>"; };
+		234D0CF027CE9A7C00E48FC5 /* YPImagePickerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPImagePickerTest.swift; sourceTree = "<group>"; };
 		23552CB627B6528800550748 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		23552CB827B6529200550748 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 		23552CBA27B6579D00550748 /* ITZZAAPITestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITZZAAPITestVC.swift; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 			path = NavigationBarFadeAnimation;
 			sourceTree = "<group>";
 		};
+		234D0CEF27CE9A6700E48FC5 /* YPImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				234D0CF027CE9A7C00E48FC5 /* YPImagePickerTest.swift */,
+			);
+			path = YPImagePicker;
+			sourceTree = "<group>";
+		};
 		23552CB227B6486400550748 /* ITZZAAPITest */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +333,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				234D0CEF27CE9A6700E48FC5 /* YPImagePicker */,
 				23552CB227B6486400550748 /* ITZZAAPITest */,
 				239A445027B37D6000D99521 /* TableViewHeaderView */,
 				2355FAE227B174ED00818E37 /* StackViewInsideScrollView */,
@@ -644,6 +655,7 @@
 				23CF06AE27AEC16200E81F4C /* CategoryVC.swift in Sources */,
 				23750010278C6D0E0005C558 /* DevicePhotoCVC.swift in Sources */,
 				239A445627B37F1900D99521 /* TableViewWithHeaderView.swift in Sources */,
+				234D0CF127CE9A7C00E48FC5 /* YPImagePickerTest.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
 				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
 				23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */,

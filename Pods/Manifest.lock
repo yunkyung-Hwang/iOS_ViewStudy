@@ -1,28 +1,40 @@
 PODS:
   - Alamofire (5.5.0)
   - Pageboy (3.6.2)
+  - PryntTrimmerView (4.0.2)
   - SideMenu (6.5.0)
+  - SteviaLayout (4.7.3)
   - Tabman (2.11.1):
     - Pageboy (~> 3.6.0)
+  - YPImagePicker (5.2.1):
+    - PryntTrimmerView (= 4.0.2)
+    - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
   - Alamofire
   - SideMenu
   - Tabman (~> 2.9)
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Pageboy
+    - PryntTrimmerView
     - SideMenu
+    - SteviaLayout
     - Tabman
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
+  YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: a1fe72d9b252742a2d763710ffa167053baa61c8
+PODFILE CHECKSUM: b56b0931aed549bde1d2e96cd9926838e5b8de1c
 
 COCOAPODS: 1.11.2
