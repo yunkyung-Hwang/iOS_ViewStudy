@@ -85,6 +85,22 @@ extension CustomCameraVC {
             }
         }
     }
+    
+    func saveImage() {
+        PHPhotoLibrary.requestAuthorization { status in
+            guard status == .authorized else { return }
+            
+            DispatchQueue.main.async {
+                guard let image = self.galleryPreviewView.image else {
+                    return
+                }
+                
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAsset(from: image)
+                }, completionHandler: nil)
+            }
+        }
+    }
 }
 
 extension CustomCameraVC: AVCapturePhotoCaptureDelegate {
@@ -95,5 +111,9 @@ extension CustomCameraVC: AVCapturePhotoCaptureDelegate {
         
         let image = UIImage(data: imageData)
         galleryPreviewView.image = image
+        
+        DispatchQueue.main.async {
+            self.saveImage()
+        }
     }
 }
