@@ -32,6 +32,8 @@
 		23552CBD27B657A700550748 /* ITZZAAPITest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23552CBC27B657A700550748 /* ITZZAAPITest.storyboard */; };
 		2355FAE427B1751500818E37 /* StackViewWithScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2355FAE327B1751500818E37 /* StackViewWithScrollView.swift */; };
 		2355FAE627B1751E00818E37 /* StackViewWithScrollView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2355FAE527B1751E00818E37 /* StackViewWithScrollView.storyboard */; };
+		2369505327D71EE000A0B01A /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369505227D71EE000A0B01A /* CustomCameraVC.swift */; };
+		2369505527D71EFF00A0B01A /* CustomCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2369505427D71EFF00A0B01A /* CustomCamera.storyboard */; };
 		23750005278C398A0005C558 /* DragCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750004278C398A0005C558 /* DragCollectionView.swift */; };
 		23750007278C39940005C558 /* DragCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23750006278C39940005C558 /* DragCollectionView.storyboard */; };
 		23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23750008278C459A0005C558 /* DragCollectionViewCell.swift */; };
@@ -100,6 +102,8 @@
 		23552CBC27B657A700550748 /* ITZZAAPITest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ITZZAAPITest.storyboard; sourceTree = "<group>"; };
 		2355FAE327B1751500818E37 /* StackViewWithScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewWithScrollView.swift; sourceTree = "<group>"; };
 		2355FAE527B1751E00818E37 /* StackViewWithScrollView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackViewWithScrollView.storyboard; sourceTree = "<group>"; };
+		2369505227D71EE000A0B01A /* CustomCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraVC.swift; sourceTree = "<group>"; };
+		2369505427D71EFF00A0B01A /* CustomCamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomCamera.storyboard; sourceTree = "<group>"; };
 		23750004278C398A0005C558 /* DragCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionView.swift; sourceTree = "<group>"; };
 		23750006278C39940005C558 /* DragCollectionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DragCollectionView.storyboard; sourceTree = "<group>"; };
 		23750008278C459A0005C558 /* DragCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -283,6 +287,15 @@
 			path = TabmanCustom;
 			sourceTree = "<group>";
 		};
+		2369505127D71EA100A0B01A /* CustomCamera */ = {
+			isa = PBXGroup;
+			children = (
+				2369505227D71EE000A0B01A /* CustomCameraVC.swift */,
+				2369505427D71EFF00A0B01A /* CustomCamera.storyboard */,
+			);
+			path = CustomCamera;
+			sourceTree = "<group>";
+		};
 		23750003278C39780005C558 /* DragCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				2369505127D71EA100A0B01A /* CustomCamera */,
 				234D0CEF27CE9A6700E48FC5 /* YPImagePicker */,
 				23552CB227B6486400550748 /* ITZZAAPITest */,
 				239A445027B37D6000D99521 /* TableViewHeaderView */,
@@ -566,6 +580,7 @@
 				23CB9EBA27ACEC1B00BC0F97 /* ButtonCustom.storyboard in Resources */,
 				23552CBD27B657A700550748 /* ITZZAAPITest.storyboard in Resources */,
 				238A3CA4277E14530009A5C9 /* UpsideViewScroll.storyboard in Resources */,
+				2369505527D71EFF00A0B01A /* CustomCamera.storyboard in Resources */,
 				2376C23D2786D42D00EBE329 /* ProfileImageWithGallery.storyboard in Resources */,
 				239A445827B37F2300D99521 /* TableViewWithHeaderView.storyboard in Resources */,
 				23247F9927A8FC32005B7578 /* CellFooterView.xib in Resources */,
@@ -644,6 +659,7 @@
 				23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */,
 				23CF06B627AEC32300E81F4C /* ViewControllerFactory.swift in Sources */,
 				239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */,
+				2369505327D71EE000A0B01A /* CustomCameraVC.swift in Sources */,
 				23DC8F9E27B9356700F79EF4 /* PostTVC.swift in Sources */,
 				23247FA327A95AAE005B7578 /* CellFooterView.swift in Sources */,
 				23CF06B227AEC2C200E81F4C /* PostFeedVC.swift in Sources */,
@@ -813,11 +829,12 @@
 				DEVELOPMENT_TEAM = U2Z5Z44P4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ViewStudy/Supports/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = ITZZAAPITest;
+				INFOPLIST_KEY_UIMainStoryboardFile = CustomCamera;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -844,11 +861,12 @@
 				DEVELOPMENT_TEAM = U2Z5Z44P4R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_ViewStudy/Supports/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = ITZZAAPITest;
+				INFOPLIST_KEY_UIMainStoryboardFile = CustomCamera;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

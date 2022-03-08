@@ -1,7 +1,21 @@
 PODS:
   - Alamofire (5.5.0)
+  - Differentiator (5.0.0)
   - Pageboy (3.6.2)
   - PryntTrimmerView (4.0.2)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.3):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
   - SideMenu (6.5.0)
   - SnapKit (5.0.1)
   - SteviaLayout (4.7.3)
@@ -13,6 +27,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - RxCocoa (< 6.2.0)
+  - RxDataSources (< 5.1.0)
+  - RxGesture (< 4.1.0)
+  - RxSwift (< 6.2.0)
   - SideMenu
   - SnapKit (~> 5.0.0)
   - Tabman (~> 2.9)
@@ -21,8 +39,14 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Differentiator
     - Pageboy
     - PryntTrimmerView
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxRelay
+    - RxSwift
     - SideMenu
     - SnapKit
     - SteviaLayout
@@ -31,14 +55,20 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: abadd243fc36db74df43dfc893829ddde94f1a3d
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 3a652fc33b39929c3edb3a8d21a5d1d5202fb32c
+PODFILE CHECKSUM: 3ccd826471480b39d397da6ed2cd7e3389b08a4b
 
 COCOAPODS: 1.11.2

@@ -12,4 +12,9 @@ target 'iOS_ViewStudy' do
   pod 'YPImagePicker'
   pod 'SnapKit', '~> 5.0.0'
 
+  # Rx
+  pod 'RxSwift', '< 6.2.0'
+  pod 'RxCocoa', '< 6.2.0'
+  pod 'RxGesture', '< 4.1.0'
+  pod 'RxDataSources', '<5.1.0'
 end
