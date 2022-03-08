@@ -10,6 +10,7 @@ import AVFoundation
 import Photos
 import RxSwift
 import RxCocoa
+import PhotosUI
 
 class CustomCameraVC: UIViewController {
     @IBOutlet weak var cameraView: UIView!
@@ -47,6 +48,9 @@ extension CustomCameraVC {
         captureButton.layer.borderWidth = 8
         
         galleryPreviewView.contentMode = .scaleAspectFill
+        galleryPreviewView.backgroundColor = .darkGray
+        galleryPreviewView.layer.cornerRadius = 5
+        didTapGalleryPreviewView()
     }
     
     func setupCameraView() {
@@ -101,13 +105,33 @@ extension CustomCameraVC {
             }
         }
     }
+    
+    func didTapGalleryPreviewView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(openGallery))
+        galleryPreviewView.addGestureRecognizer(tapGesture)
+        galleryPreviewView.isUserInteractionEnabled = true
+    }
+    
+    @objc func openGallery() {
+        // 'photoLibrary' will be deprecated in a future version of iOS: Will be removed in a future release, use PHPicker.
+//        let gallery = UIImagePickerController()
+//        gallery.sourceType = .photoLibrary
+//        present(gallery, animated: true, completion: nil)
+        
+        var config = PHPickerConfiguration()
+        config.selectionLimit = 3
+        config.filter = PHPickerFilter.images
+
+        let pickerViewController = PHPickerViewController(configuration: config)
+        pickerViewController.delegate = self
+        self.present(pickerViewController, animated: true, completion: nil)
+    }
 }
 
 extension CustomCameraVC: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
-        guard let imageData = photo.fileDataRepresentation()
-        else { return }
+        guard let imageData = photo.fileDataRepresentation() else { return }
         
         let image = UIImage(data: imageData)
         galleryPreviewView.image = image
@@ -115,5 +139,21 @@ extension CustomCameraVC: AVCapturePhotoCaptureDelegate {
         DispatchQueue.main.async {
             self.saveImage()
         }
+    }
+}
+
+extension CustomCameraVC: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+       picker.dismiss(animated: true, completion: nil)
+       
+       for result in results {
+          result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
+             if let image = object as? UIImage {
+                DispatchQueue.main.async {
+                   print("Selected image: \(image)")
+                }
+             }
+          })
+       }
     }
 }
