@@ -14,7 +14,7 @@ import Photos
 import YPImagePicker
 import SnapKit
 
-class YPImagePickerTest: UIViewController {
+class YPImagePickerTest: UIViewController, UIImagePickerControllerDelegate {
     var selectedItems = [YPMediaItem]()
 
     lazy var selectedImageV : UIImageView = {
