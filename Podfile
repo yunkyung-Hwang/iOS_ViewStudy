@@ -11,6 +11,8 @@ target 'iOS_ViewStudy' do
   pod 'Tabman', '~> 2.9'
   pod 'YPImagePicker'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'PhotoCropper'
+
 
   # Rx
   pod 'RxSwift', '< 6.2.0'

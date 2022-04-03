@@ -1,0 +1,6 @@
+framework module PhotoCropper {
+  umbrella header "PhotoCropper-umbrella.h"
+
+  export *
+  module * { export * }
+}
