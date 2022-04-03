@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="moF-NF-vCw">
-                                <rect key="frame" x="0.0" y="461" width="414" height="401"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="moF-NF-vCw">
+                                <rect key="frame" x="0.0" y="461" width="414" height="435"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HCI-8q-ebe">
                                     <size key="itemSize" width="128" height="128"/>
@@ -51,28 +51,17 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gza-Eg-iVh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="409"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gza-Eg-iVh" secondAttribute="height" multiplier="414:409" id="gRw-Wm-5sJ"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gza-Eg-iVh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="99r-21-rKf"/>
-                            <constraint firstItem="gza-Eg-iVh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NtF-8e-aPL"/>
-                            <constraint firstItem="moF-NF-vCw" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="X4g-If-wan"/>
-                            <constraint firstItem="moF-NF-vCw" firstAttribute="top" secondItem="gza-Eg-iVh" secondAttribute="bottom" constant="8" symbolic="YES" id="YKh-Xc-eYf"/>
-                            <constraint firstItem="gza-Eg-iVh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ZeM-9e-wbt"/>
-                            <constraint firstItem="moF-NF-vCw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fhH-bx-2P2"/>
-                            <constraint firstItem="moF-NF-vCw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="plN-8g-Kc6"/>
+                            <constraint firstAttribute="bottom" secondItem="moF-NF-vCw" secondAttribute="bottom" id="Nyc-By-nw1"/>
+                            <constraint firstItem="moF-NF-vCw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RXq-cz-WBI"/>
+                            <constraint firstItem="moF-NF-vCw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ae5-Wz-GtF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="moF-NF-vCw" id="Weq-3v-DNm"/>
-                        <outlet property="imageView" destination="gza-Eg-iVh" id="fh8-mO-2yG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

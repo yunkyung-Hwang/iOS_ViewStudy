@@ -10,10 +10,11 @@
 
 import UIKit
 import Photos
+import PhotoCropper
 
 class DevicePhotoCV: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    private var preview = PhotoCropperView()
     
     var devicePhotos: PHFetchResult<PHAsset>!
     let imageManager = PHCachingImageManager()
@@ -24,6 +25,21 @@ class DevicePhotoCV: UIViewController {
         
         fetchAssets()
         setImageView([0,0])
+        
+        view.addSubview(preview)
+        layoutPreview()
+        preview.scrollView.alwaysBounceVertical = true
+        preview.scrollView.alwaysBounceHorizontal = true
+    }
+    
+    private func layoutPreview() {
+        preview.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(100)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.height.equalTo(preview.snp.width)
+            $0.bottom.equalTo(collectionView.snp.top).offset(-12)
+        }
     }
     
     func fetchAssets() {
@@ -31,16 +47,20 @@ class DevicePhotoCV: UIViewController {
     }
     
     func setImageView(_ indexPath: IndexPath) {
-        let width = imageView.frame.width
-        let height = imageView.frame.height
+        let width = preview.frame.width
+        let height = preview.frame.height
         
         let options = PHImageRequestOptions()
         options.deliveryMode = .highQualityFormat
         options.resizeMode = .exact
         
-        PHImageManager.default().requestImage(for: devicePhotos.object(at: indexPath.row), targetSize: CGSize(width: width, height: height), contentMode: .aspectFit, options: options) { (image, _) in
+        PHImageManager.default().requestImage(for: devicePhotos.object(at: indexPath.row),
+                                                 targetSize: CGSize(width: width,
+                                                                    height: height),
+                                                 contentMode: .aspectFit, options: options) { (image, _) in
             if image != nil {
-                self.imageView.image = image
+                self.preview.imageView.image = image
+                self.preview.updateZoomScale()
             }
         }
     }
@@ -79,14 +99,15 @@ extension DevicePhotoCV: UICollectionViewDelegate {
 //MARK: UICollectionViewDelegateFlowLayout
 extension DevicePhotoCV: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width/3.2, height: view.frame.width/3.2)
+        return CGSize(width: view.frame.width/3.2,
+                      height: view.frame.width/3.2)
     }
 }
 
 extension PHFetchOptions {
     static var ascendingOptions: PHFetchOptions = {
         let option = PHFetchOptions()
-        option.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+        option.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return option
     }()
 }
