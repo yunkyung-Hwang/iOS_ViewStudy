@@ -18,13 +18,14 @@ class DevicePhotoCV: UIViewController {
     
     var devicePhotos: PHFetchResult<PHAsset>!
     let imageManager = PHCachingImageManager()
+    var albumList = [PHAssetCollection]()
     
     override func viewDidLoad() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        
-        fetchAssets()
+        devicePhotos = PHAsset.fetchAssets(with: .ascendingOptions)
         setImageView([0,0])
+        getAlbums()
         
         view.addSubview(preview)
         layoutPreview()
@@ -42,8 +43,8 @@ class DevicePhotoCV: UIViewController {
         }
     }
     
-    func fetchAssets() {
-        devicePhotos = PHAsset.fetchAssets(with: .ascendingOptions)
+    func fetchAssets(with album: PHAssetCollection) {
+        devicePhotos = PHAsset.fetchAssets(in: album, options: .ascendingOptions)
     }
     
     func setImageView(_ indexPath: IndexPath) {
@@ -61,8 +62,32 @@ class DevicePhotoCV: UIViewController {
             if image != nil {
                 self.preview.imageView.image = image
                 self.preview.updateZoomScale()
+            } else {
+                print("error")
             }
         }
+    }
+    
+    func getAlbums() {
+        let options:PHFetchOptions = PHFetchOptions()
+        let getAlbums : PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: options)
+        let getSmartAlbums: PHFetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .any, options: options)
+        // 앨범 정보
+        // smartAlbum
+        for i in 0 ..< getSmartAlbums.count{
+            let collection:PHAssetCollection = getSmartAlbums[i]
+            let assetsFetchResult: PHFetchResult = PHAsset.fetchAssets(in: collection, options: nil)
+            print(collection.localizedTitle ?? "", assetsFetchResult.count)
+            albumList.append(getSmartAlbums[i])
+        }
+        // 내가 생성한 앨범
+        for i in 0 ..< getAlbums.count{
+            let collection:PHAssetCollection = getAlbums[i]
+            print(collection.localizedTitle ?? "", collection.estimatedAssetCount)
+            albumList.append(getAlbums[i])
+        }
+        fetchAssets(with: albumList[0])
+        print(devicePhotos.count)
     }
 }
 
@@ -93,6 +118,7 @@ extension DevicePhotoCV: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         setImageView(indexPath)
+        print(indexPath)
     }
 }
 
