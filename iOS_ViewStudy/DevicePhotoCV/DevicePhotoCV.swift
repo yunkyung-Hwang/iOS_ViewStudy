@@ -47,8 +47,8 @@ class DevicePhotoCV: UIViewController {
     }
     
     func setImageView(_ indexPath: IndexPath) {
-        let width = preview.frame.width
-        let height = preview.frame.height
+        let width = devicePhotos.object(at: indexPath.row).pixelWidth
+        let height = devicePhotos.object(at: indexPath.row).pixelHeight
         
         let options = PHImageRequestOptions()
         options.deliveryMode = .highQualityFormat
