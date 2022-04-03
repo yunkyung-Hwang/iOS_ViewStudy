@@ -18,7 +18,7 @@ class YPMultipleSelectionIndicator: UIView {
     convenience init() {
         self.init(frame: .zero)
         
-        let size: CGFloat = 20
+        let size: CGFloat = ((window?.frame.size.width ?? 375) - 54) / 3
         
         sv(
             circle,
@@ -29,7 +29,6 @@ class YPMultipleSelectionIndicator: UIView {
         circle.size(size)
         label.fillContainer()
         
-        circle.layer.cornerRadius = size / 2.0
         label.textAlignment = .center
         label.textColor = .white
         label.font = YPConfig.fonts.multipleSelectionIndicatorFont
@@ -40,14 +39,12 @@ class YPMultipleSelectionIndicator: UIView {
     func set(number: Int?) {
         label.isHidden = (number == nil)
         if let number = number {
-            circle.backgroundColor = selectionColor
-            circle.layer.borderColor = UIColor.clear.cgColor
-            circle.layer.borderWidth = 0
+            circle.layer.borderColor = selectionColor.cgColor
+            circle.layer.borderWidth = 4
             label.text = "\(number)"
         } else {
-            circle.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-            circle.layer.borderColor = UIColor.white.cgColor
-            circle.layer.borderWidth = 1
+            circle.layer.borderColor = UIColor.clear.cgColor
+            circle.layer.borderWidth = 0
             label.text = ""
         }
     }
@@ -80,8 +77,8 @@ class YPLibraryViewCell: UICollectionViewCell {
         )
         
         layout(
-            3,
-            multipleSelectionIndicator-3-|
+            0,
+            multipleSelectionIndicator-0-|
         )
         
         imageView.contentMode = .scaleAspectFill

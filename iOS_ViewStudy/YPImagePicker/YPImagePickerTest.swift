@@ -157,6 +157,9 @@ class YPImagePickerTest: UIViewController, UIImagePickerControllerDelegate {
 
         config.library.maxNumberOfItems = 5
         config.gallery.hidesRemoveButton = false
+        config.library.numberOfItemsInRow = 3
+        config.library.spacingBetweenItems = 7
+        config.library.defaultMultipleSelection = true
 
         /* Disable scroll to change between mode */
         // config.isScrollToChangeModesEnabled = false
