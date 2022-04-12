@@ -51,16 +51,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v13-oa-g8e">
+                                <rect key="frame" x="20" y="422" width="74" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="INL-HA-UbO"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="최근 항목" image="chevron.down" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="v13-oa-g8e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="IoH-g7-r6I"/>
                             <constraint firstAttribute="bottom" secondItem="moF-NF-vCw" secondAttribute="bottom" id="Nyc-By-nw1"/>
                             <constraint firstItem="moF-NF-vCw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RXq-cz-WBI"/>
                             <constraint firstItem="moF-NF-vCw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ae5-Wz-GtF"/>
+                            <constraint firstItem="moF-NF-vCw" firstAttribute="top" secondItem="v13-oa-g8e" secondAttribute="bottom" constant="8" id="hxU-Ab-p1h"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="albumListBtn" destination="v13-oa-g8e" id="zzP-KB-UGk"/>
                         <outlet property="collectionView" destination="moF-NF-vCw" id="Weq-3v-DNm"/>
                     </connections>
                 </viewController>
@@ -70,6 +82,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,6 +14,7 @@ import PhotoCropper
 
 class DevicePhotoCV: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var albumListBtn: UIButton!
     private var preview = PhotoCropperView()
     
     var devicePhotos: PHFetchResult<PHAsset>!
@@ -31,6 +32,8 @@ class DevicePhotoCV: UIViewController {
         layoutPreview()
         preview.scrollView.alwaysBounceVertical = true
         preview.scrollView.alwaysBounceHorizontal = true
+        
+        configureAlbumListBtn()
     }
     
     private func layoutPreview() {
@@ -39,7 +42,7 @@ class DevicePhotoCV: UIViewController {
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(preview.snp.width)
-            $0.bottom.equalTo(collectionView.snp.top).offset(-12)
+            $0.bottom.equalTo(albumListBtn.snp.top).offset(-12)
         }
     }
     
@@ -88,6 +91,15 @@ class DevicePhotoCV: UIViewController {
         }
         fetchAssets(with: albumList[0])
         print(devicePhotos.count)
+    }
+    
+    func configureAlbumListBtn() {
+        albumListBtn.semanticContentAttribute = .forceRightToLeft
+        albumListBtn.setTitle("최근 항목", for: .normal)
+        albumListBtn.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        albumListBtn.titleLabel?.baselineAdjustment = .alignCenters
+        albumListBtn.imageView?.layer.transform = CATransform3DMakeScale(0.7, 0.7, 0.7)
+        albumListBtn.tintColor = .black
     }
 }
 
