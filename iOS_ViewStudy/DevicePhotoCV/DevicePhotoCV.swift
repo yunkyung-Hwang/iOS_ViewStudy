@@ -26,7 +26,6 @@ class DevicePhotoCV: UIViewController {
         collectionView.delegate = self
         devicePhotos = PHAsset.fetchAssets(with: .ascendingOptions)
         setImageView([0,0])
-        getAlbums()
         
         view.addSubview(preview)
         layoutPreview()
@@ -36,6 +35,12 @@ class DevicePhotoCV: UIViewController {
         configureAlbumListBtn()
     }
     
+    @IBAction func showAlbumList(_ sender: Any) {
+        getAlbums()
+    }
+}
+
+extension DevicePhotoCV {
     private func layoutPreview() {
         preview.snp.makeConstraints {
             $0.top.equalToSuperview().offset(100)
