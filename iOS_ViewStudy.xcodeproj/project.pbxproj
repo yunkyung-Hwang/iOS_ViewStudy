@@ -52,6 +52,10 @@
 		23934D4127906653007857D3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23934D4027906653007857D3 /* BaseView.swift */; };
 		23934D432790665A007857D3 /* BaseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23934D422790665A007857D3 /* BaseView.storyboard */; };
 		23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23934D442790683D007857D3 /* CustomSideMenuNC.swift */; };
+		239734FB282907F7003D233C /* Dailyst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239734FA282907F7003D233C /* Dailyst.swift */; };
+		239734FD28292800003D233C /* EmotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239734FC28292800003D233C /* EmotionType.swift */; };
+		239734FF28295023003D233C /* DailystBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239734FE28295023003D233C /* DailystBase.storyboard */; };
+		2397350128295032003D233C /* DailystBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397350028295032003D233C /* DailystBase.swift */; };
 		239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0B4E279DA436000A2567 /* CollectionViewBasicVC.swift */; };
 		239A0B51279DA44A000A2567 /* CollectionViewBasic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239A0B50279DA44A000A2567 /* CollectionViewBasic.storyboard */; };
 		239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A0B52279DA829000A2567 /* BasicCVC.swift */; };
@@ -124,6 +128,10 @@
 		23934D4027906653007857D3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		23934D422790665A007857D3 /* BaseView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseView.storyboard; sourceTree = "<group>"; };
 		23934D442790683D007857D3 /* CustomSideMenuNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSideMenuNC.swift; sourceTree = "<group>"; };
+		239734FA282907F7003D233C /* Dailyst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dailyst.swift; sourceTree = "<group>"; };
+		239734FC28292800003D233C /* EmotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionType.swift; sourceTree = "<group>"; };
+		239734FE28295023003D233C /* DailystBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailystBase.storyboard; sourceTree = "<group>"; };
+		2397350028295032003D233C /* DailystBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailystBase.swift; sourceTree = "<group>"; };
 		239A0B4E279DA436000A2567 /* CollectionViewBasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicVC.swift; sourceTree = "<group>"; };
 		239A0B50279DA44A000A2567 /* CollectionViewBasic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewBasic.storyboard; sourceTree = "<group>"; };
 		239A0B52279DA829000A2567 /* BasicCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCVC.swift; sourceTree = "<group>"; };
@@ -346,6 +354,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				239734F9282907C4003D233C /* Dailyst */,
 				2369505127D71EA100A0B01A /* CustomCamera */,
 				234D0CEF27CE9A6700E48FC5 /* YPImagePicker */,
 				23552CB227B6486400550748 /* ITZZAAPITest */,
@@ -400,6 +409,17 @@
 				23934D442790683D007857D3 /* CustomSideMenuNC.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		239734F9282907C4003D233C /* Dailyst */ = {
+			isa = PBXGroup;
+			children = (
+				239734FA282907F7003D233C /* Dailyst.swift */,
+				239734FC28292800003D233C /* EmotionType.swift */,
+				239734FE28295023003D233C /* DailystBase.storyboard */,
+				2397350028295032003D233C /* DailystBase.swift */,
+			);
+			path = Dailyst;
 			sourceTree = "<group>";
 		};
 		239A0B4D279DA417000A2567 /* CollectionViewBasic */ = {
@@ -569,6 +589,7 @@
 				23190FC6279C5522000F96DF /* Onboarding.storyboard in Resources */,
 				23190FCA279C624A000F96DF /* OnboardingBase.storyboard in Resources */,
 				2330A7CA277E285000097A6A /* NavigationBarFadeAnimation.storyboard in Resources */,
+				239734FF28295023003D233C /* DailystBase.storyboard in Resources */,
 				239A0B51279DA44A000A2567 /* CollectionViewBasic.storyboard in Resources */,
 				238A3CA6277E14530009A5C9 /* Assets.xcassets in Resources */,
 				2355FAE627B1751E00818E37 /* StackViewWithScrollView.storyboard in Resources */,
@@ -641,6 +662,7 @@
 				23F0138C27A1488800C87399 /* CoinData.swift in Sources */,
 				23552CB927B6529200550748 /* PostManager.swift in Sources */,
 				23A261B227A112EF0052D244 /* CoinManager.swift in Sources */,
+				239734FD28292800003D233C /* EmotionType.swift in Sources */,
 				2376C23B2786D3C700EBE329 /* ProfileImageWithGallery.swift in Sources */,
 				23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */,
 				23247F9B27A94B66005B7578 /* CommunityVC.swift in Sources */,
@@ -656,6 +678,7 @@
 				23190FC4279C5512000F96DF /* OnboardingVC.swift in Sources */,
 				23190FC8279C623E000F96DF /* OnboardingBaseVC.swift in Sources */,
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
+				239734FB282907F7003D233C /* Dailyst.swift in Sources */,
 				23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */,
 				23CF06B627AEC32300E81F4C /* ViewControllerFactory.swift in Sources */,
 				239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */,
@@ -673,6 +696,7 @@
 				239A445627B37F1900D99521 /* TableViewWithHeaderView.swift in Sources */,
 				234D0CF127CE9A7C00E48FC5 /* YPImagePickerTest.swift in Sources */,
 				23934D4127906653007857D3 /* BaseView.swift in Sources */,
+				2397350128295032003D233C /* DailystBase.swift in Sources */,
 				23750009278C459A0005C558 /* DragCollectionViewCell.swift in Sources */,
 				23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */,
 				23552CB727B6528800550748 /* PostModel.swift in Sources */,
@@ -834,7 +858,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = DevicePhotoCV;
+				INFOPLIST_KEY_UIMainStoryboardFile = DailystBase;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -866,7 +890,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "프로필 사진 수정을 위한 갤러리 접근 권한!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = DevicePhotoCV;
+				INFOPLIST_KEY_UIMainStoryboardFile = DailystBase;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
