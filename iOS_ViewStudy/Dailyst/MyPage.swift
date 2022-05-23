@@ -165,5 +165,17 @@ extension MyPage {
     
     private func configureMyMedia() {
         mediaCnt.text = "\(0)개"
+        darkModeBtn.addTarget(self, action: #selector(toggleDarkMode), for: .touchUpInside)
+    }
+    
+    @objc func toggleDarkMode() {
+        if self.overrideUserInterfaceStyle == .dark {
+            overrideUserInterfaceStyle = .light
+            UserDefaults.standard.set("Light", forKey: "Appearance")
+        } else {
+            overrideUserInterfaceStyle = .dark
+            UserDefaults.standard.set("Dark", forKey: "Appearance")
+        }
+        self.viewWillAppear(true)
     }
 }
