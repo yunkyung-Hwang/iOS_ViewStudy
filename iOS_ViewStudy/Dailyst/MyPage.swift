@@ -172,9 +172,11 @@ extension MyPage {
         if self.overrideUserInterfaceStyle == .dark {
             overrideUserInterfaceStyle = .light
             UserDefaults.standard.set("Light", forKey: "Appearance")
+            popupToast(toastType: .changeLightmode)
         } else {
             overrideUserInterfaceStyle = .dark
             UserDefaults.standard.set("Dark", forKey: "Appearance")
+            popupToast(toastType: .changeDarkmode)
         }
         self.viewWillAppear(true)
     }

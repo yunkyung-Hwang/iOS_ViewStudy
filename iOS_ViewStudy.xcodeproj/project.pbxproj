@@ -80,6 +80,8 @@
 		23FF818B283BCF53002FEAA8 /* UIVIewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */; };
 		23FF818D283BCFFC002FEAA8 /* NaviType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF818C283BCFFC002FEAA8 /* NaviType.swift */; };
 		23FF8191283BD1C5002FEAA8 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF8190283BD1C5002FEAA8 /* MyPage.swift */; };
+		23FF8193283BD231002FEAA8 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF8192283BD231002FEAA8 /* ToastView.swift */; };
+		23FF8195283BD24A002FEAA8 /* ToastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF8194283BD24A002FEAA8 /* ToastType.swift */; };
 		87951F262246689A6C12D43C /* Pods_iOS_ViewStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3584C6B1CC9A263E18A4C945 /* Pods_iOS_ViewStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +162,8 @@
 		23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+.swift"; sourceTree = "<group>"; };
 		23FF818C283BCFFC002FEAA8 /* NaviType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviType.swift; sourceTree = "<group>"; };
 		23FF8190283BD1C5002FEAA8 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		23FF8192283BD231002FEAA8 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		23FF8194283BD24A002FEAA8 /* ToastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastType.swift; sourceTree = "<group>"; };
 		3584C6B1CC9A263E18A4C945 /* Pods_iOS_ViewStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_ViewStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0987B3D62142B084E58037B /* Pods-iOS_ViewStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_ViewStudy.release.xcconfig"; path = "Target Support Files/Pods-iOS_ViewStudy/Pods-iOS_ViewStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,6 +434,8 @@
 				23FF818C283BCFFC002FEAA8 /* NaviType.swift */,
 				23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */,
 				23FF8190283BD1C5002FEAA8 /* MyPage.swift */,
+				23FF8192283BD231002FEAA8 /* ToastView.swift */,
+				23FF8194283BD24A002FEAA8 /* ToastType.swift */,
 			);
 			path = Dailyst;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 				238A3CA1277E14530009A5C9 /* UpsideViewScroll.swift in Sources */,
 				239734FB282907F7003D233C /* Dailyst.swift in Sources */,
 				23295D16279B08540097AEC8 /* MenuBtnTVC.swift in Sources */,
+				23FF8195283BD24A002FEAA8 /* ToastType.swift in Sources */,
 				23CF06B627AEC32300E81F4C /* ViewControllerFactory.swift in Sources */,
 				239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */,
 				2369505327D71EE000A0B01A /* CustomCameraVC.swift in Sources */,
@@ -703,6 +710,7 @@
 				23E4E58B283BAD4000864E6D /* NavigationBar.swift in Sources */,
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
 				23DC8F9927B9315C00F79EF4 /* PostVM.swift in Sources */,
+				23FF8193283BD231002FEAA8 /* ToastView.swift in Sources */,
 				23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */,
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
 				23552CBB27B6579D00550748 /* ITZZAAPITestVC.swift in Sources */,
