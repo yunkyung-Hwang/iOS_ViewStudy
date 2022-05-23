@@ -14,8 +14,7 @@ class DailystBase: UIViewController {
     
     @IBAction func showAddProcess(_ sender: Any) {
         let addVC = Dailyst()
-//        addVC.modalPresentationStyle = .overFullScreen
-//        present(addVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(addVC, animated: true)
+        addVC.modalPresentationStyle = .overFullScreen
+        present(addVC, animated: true, completion: nil)
     }
 }

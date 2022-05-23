@@ -85,14 +85,15 @@ class Dailyst: UIViewController {
             $0.setTextViewPlaceholder("오늘은 어떤 영상을 보셨나요?")
         }
     
+    let naviBar = NavigationBar()
     let postContentPlaceholder = "오늘은 어떤 영상을 보셨나요?"
     var imagePicker:UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNaviBar()
         configureLayout()
         configureContentView()
-        configureNaviBar()
         configureEmotionStackView()
         configurePlayer()
         configureURL()
@@ -102,21 +103,9 @@ class Dailyst: UIViewController {
 // MARK: - Configure
 extension Dailyst {
     private func configureNaviBar() {
-        navigationItem.title = "게시글 작성"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"),
-                                                           style: .done,
-                                                           target: self,
-                                                           action: #selector(popVC))
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(popVC))
-        navigationController?.navigationBar.tintColor = .black
-    }
-    
-    @objc func popVC() {
-        navigationController?.popViewController(animated: true)
+        naviBar.configureNaviBar(targetVC: self, title: "게시글 작성")
+        naviBar.configureBackBtn(targetVC: self, action: #selector(popVC), naviType: .present)
+        naviBar.configureRightBarBtn(targetVC: self, action: #selector(popVC), title: "저장")
     }
     
     private func configureContentView() {
@@ -205,7 +194,7 @@ extension Dailyst {
         view.addSubview(postContent)
         
         playerBaseImage.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(25)
+            $0.top.equalTo(naviBar.snp.bottom).offset(25)
             $0.leading.equalToSuperview().offset(57)
             $0.trailing.equalToSuperview().offset(-57)
             $0.height.equalTo(playerBaseImage.snp.width).multipliedBy(287.0/260.0)
@@ -320,25 +309,5 @@ extension UITextView {
         var topCorrect = (self.bounds.size.height - self.contentSize.height * self.zoomScale) / 2
         topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
         self.contentInset.top = topCorrect
-    }
-}
-
-extension UIViewController {
-    /// 화면 터치 시 키보드 내리는 함수
-    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    /// 화면 터치 시 키보드 내리는 함수
-    func hideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }

@@ -16,18 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIS-yP-yAf">
-                                <rect key="frame" x="174" y="433" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIS-yP-yAf">
+                                <rect key="frame" x="326" y="794" width="68" height="58"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="DailystEdit"/>
+                                <connections>
+                                    <action selector="showAddProcess:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yXb-Lz-M99"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxs-5p-lpm">
+                                <rect key="frame" x="239" y="807.5" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="showAddProcess:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yXb-Lz-M99"/>
+                                    <action selector="showMyPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pU0-0S-htg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RIS-yP-yAf" firstAttribute="centerY" secondItem="Mxs-5p-lpm" secondAttribute="centerY" id="dwC-8g-5px"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RIS-yP-yAf" secondAttribute="bottom" constant="10" id="jby-pq-EH6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RIS-yP-yAf" secondAttribute="trailing" constant="20" id="sop-Uc-7fO"/>
+                            <constraint firstItem="RIS-yP-yAf" firstAttribute="leading" secondItem="Mxs-5p-lpm" secondAttribute="trailing" constant="20" id="tVP-sz-keK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ecP-eB-UNS"/>
                 </viewController>
@@ -38,10 +51,9 @@
         <!--Navigation Controller-->
         <scene sceneID="2Ba-0d-d3C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XEI-hf-nJL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XEI-hf-nJL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Y0-Rq-bEr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -55,6 +67,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DailystEdit" width="44" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
