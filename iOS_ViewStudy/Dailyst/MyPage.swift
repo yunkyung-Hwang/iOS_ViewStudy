@@ -45,6 +45,7 @@ class MyPage: UIViewController {
             $0.tintColor = .label
             $0.setTitleColor(.label, for: .normal)
             $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 255)
+            $0.addTarget(self, action: #selector(showLockVC), for: .touchUpInside)
         }
     
     private var versionBtn = UIButton()
@@ -179,5 +180,11 @@ extension MyPage {
             popupToast(toastType: .changeDarkmode)
         }
         self.viewWillAppear(true)
+    }
+    
+    @objc func showLockVC() {
+        let lockVC = LockVC()
+        lockVC.modalPresentationStyle = .fullScreen
+        present(lockVC, animated: true, completion: nil)
     }
 }
