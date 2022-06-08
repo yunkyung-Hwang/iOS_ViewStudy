@@ -12,7 +12,7 @@ import SnapKit
 class KeypadCVC: UICollectionViewCell {
     var number = UILabel()
         .then {
-            $0.font = UIFont.systemFont(ofSize: 17)
+            $0.font = UIFont.systemFont(ofSize: 20)
             $0.textColor = .label
             $0.textAlignment = .center
         }

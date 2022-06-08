@@ -23,7 +23,7 @@ class LockVC: UIViewController {
         .then {
             $0.text = "잠금 해제를 위한 암호를 입력해 주세요."
             $0.font = UIFont.systemFont(ofSize: 17)
-            $0.textColor = .label
+            $0.textColor = .systemGray
             $0.textAlignment = .center
         }
     
@@ -86,8 +86,8 @@ extension LockVC {
         }
         
         keypadCV.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(35)
-            $0.trailing.equalToSuperview().offset(-35)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(keypadCV.snp.width).multipliedBy(4.0/5.0)
             $0.bottom.equalToSuperview().offset(-66)
         }
@@ -119,34 +119,34 @@ extension LockVC {
     }
     
     private func wrongAnimation() {
-        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseInOut, .autoreverse]) {
-            self.passwdStackView.snp.updateConstraints {
-                $0.leading.equalToSuperview().offset(111)
-                $0.trailing.equalToSuperview().offset(-91)
+        self.passwdLayout(leading: 91, triling: -111)
+        UIView.animate(withDuration:0.1,
+                       delay: 0,
+                       options: [.curveEaseInOut, .autoreverse, .repeat]) {
+            self.view.isUserInteractionEnabled = false
+             UIView.modifyAnimations(withRepeatCount: 2, autoreverses: true) {
+                 self.passwdLayout(leading: 111, triling: -91)
+             }
+        } completion: { _ in
+            self.view.isUserInteractionEnabled = true
+            self.message.text = "잠금 해제를 위한 암호를 입력해 주세요."
+            self.passwdLayout(leading: 101, triling: -101)
+            
+            for i in 0..<4 {
+                let passwd = self.passwdStackView.arrangedSubviews[i] as! UIImageView
+                passwd.image = UIImage(named: "passwdNull")
             }
-            self.view.layoutIfNeeded()
-        } completion: { Bool in
-            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut) {
-                self.passwdStackView.snp.updateConstraints {
-                    $0.leading.equalToSuperview().offset(91)
-                    $0.trailing.equalToSuperview().offset(-111)
-                }
-                self.view.layoutIfNeeded()
-            } completion: { Bool in
-                self.passwdStackView.snp.updateConstraints {
-                    $0.leading.equalToSuperview().offset(101)
-                    $0.trailing.equalToSuperview().offset(-101)
-                }
-                self.view.layoutIfNeeded()
-                
-                for i in 0..<4 {
-                    let passwd = self.passwdStackView.arrangedSubviews[i] as! UIImageView
-                    passwd.image = UIImage(named: "passwdNull")
-                }
-                self.inputPasswd.removeAll()
-            }
+            self.inputPasswd.removeAll()
         }
-
+        message.text = "암호가 일치하지 않습니다."
+    }
+    
+    private func passwdLayout(leading: CGFloat, triling: CGFloat) {
+        self.passwdStackView.snp.updateConstraints {
+            $0.leading.equalToSuperview().offset(leading)
+            $0.trailing.equalToSuperview().offset(triling)
+        }
+        self.view.layoutIfNeeded()
     }
 }
 
