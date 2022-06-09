@@ -104,8 +104,8 @@ class Dailyst: UIViewController {
 extension Dailyst {
     private func configureNaviBar() {
         naviBar.configureNaviBar(targetVC: self, title: "게시글 작성")
-        naviBar.configureBackBtn(targetVC: self, action: #selector(popVC), naviType: .present)
-        naviBar.configureRightBarBtn(targetVC: self, action: #selector(popVC), title: "저장")
+        naviBar.configureBackBtn(targetVC: self, action: #selector(dismissVC), naviType: .present)
+        naviBar.configureRightBarBtn(targetVC: self, action: #selector(dismissVC), title: "저장")
     }
     
     private func configureContentView() {

@@ -19,7 +19,8 @@ class DailystBase: UIViewController {
     }
     @IBAction func showMyPage(_ sender: Any) {
         let myPageVC = MyPage()
-        myPageVC.modalPresentationStyle = .overFullScreen
-        present(myPageVC, animated: true, completion: nil)
+//        myPageVC.modalPresentationStyle = .overFullScreen
+//        present(myPageVC, animated: true, completion: nil)
+        navigationController?.pushViewController(myPageVC, animated: true)
     }
 }
