@@ -34,7 +34,7 @@ class MyPage: UIViewController {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             $0.tintColor = .label
             $0.setTitleColor(.label, for: .normal)
-            $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 255)
+            $0.contentHorizontalAlignment = .left
         }
     
     private var lockBtn = UIButton()
@@ -44,8 +44,7 @@ class MyPage: UIViewController {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             $0.tintColor = .label
             $0.setTitleColor(.label, for: .normal)
-            $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 255)
-            $0.addTarget(self, action: #selector(showLockSettingVC), for: .touchUpInside)
+            $0.contentHorizontalAlignment = .left
         }
     
     private var versionBtn = UIButton()
@@ -55,7 +54,7 @@ class MyPage: UIViewController {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             $0.tintColor = .label
             $0.setTitleColor(.label, for: .normal)
-            $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 255)
+            $0.contentHorizontalAlignment = .left
         }
     
     private var logoutBtn = UIButton()
@@ -65,7 +64,7 @@ class MyPage: UIViewController {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             $0.tintColor = .label
             $0.setTitleColor(.label, for: .normal)
-            $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 258)
+            $0.contentHorizontalAlignment = .left
         }
     
     private var signoutBtn = UIButton()
@@ -75,7 +74,7 @@ class MyPage: UIViewController {
             $0.titleLabel?.font = UIFont.systemFont(ofSize: 15)
             $0.tintColor = .label
             $0.setTitleColor(.label, for: .normal)
-            $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 255)
+            $0.contentHorizontalAlignment = .left
         }
     
     override func viewDidLoad() {
@@ -91,7 +90,7 @@ class MyPage: UIViewController {
 extension MyPage {
     private func configureNaviBar() {
         naviBar.configureNaviBar(targetVC: self, title: "MyPage")
-        naviBar.configureBackBtn(targetVC: self, action: #selector(popVC), naviType: .present)
+        naviBar.configureBackBtn(targetVC: self, action: #selector(dismissVC), naviType: .present)
     }
     
     private func configureContentView() {
@@ -127,34 +126,13 @@ extension MyPage {
                 $0.spacing = 8
             }
         view.addSubview(stackView)
-        stackView.addArrangedSubview(darkModeBtn)
-        stackView.addArrangedSubview(lockBtn)
-        stackView.addArrangedSubview(versionBtn)
-        stackView.addArrangedSubview(logoutBtn)
-        stackView.addArrangedSubview(signoutBtn)
-        darkModeBtn.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview()
-        }
-
-        lockBtn.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview()
-        }
-
-        versionBtn.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview()
-        }
-
-        logoutBtn.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview()
-        }
-
-        signoutBtn.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview()
+        
+        [darkModeBtn, lockBtn, versionBtn, logoutBtn, signoutBtn].forEach {
+            stackView.addArrangedSubview($0)
+            $0.snp.makeConstraints {
+                $0.height.equalTo(50)
+                $0.leading.trailing.equalToSuperview()
+            }
         }
         
         stackView.snp.makeConstraints {
@@ -167,6 +145,7 @@ extension MyPage {
     private func configureMyMedia() {
         mediaCnt.text = "\(0)개"
         darkModeBtn.addTarget(self, action: #selector(toggleDarkMode), for: .touchUpInside)
+        lockBtn.addTarget(self, action: #selector(showLockSettingVC), for: .touchUpInside)
     }
     
     @objc func toggleDarkMode() {
@@ -184,6 +163,7 @@ extension MyPage {
     
     @objc func showLockSettingVC() {
         let lockSettingVC = LockSettingVC()
-        self.navigationController?.pushViewController(lockSettingVC, animated: true)
+        lockSettingVC.modalPresentationStyle = .fullScreen
+        present(lockSettingVC, animated: true)
     }
 }

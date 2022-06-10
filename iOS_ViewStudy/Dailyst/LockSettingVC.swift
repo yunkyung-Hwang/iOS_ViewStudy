@@ -8,9 +8,13 @@
 import UIKit
 import Then
 import SnapKit
+import RxSwift
+import RxCocoa
+import RxGesture
 
 class LockSettingVC: UIViewController {
     let naviBar = NavigationBar()
+    let bag = DisposeBag()
     private var lockView = UIView()
     private var lockTitle = UILabel()
         .then {
@@ -33,22 +37,23 @@ class LockSettingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNaviBar()
         configureContentView()
-        configureLayout()
+        bindUI()
     }
 }
 
 // MARK: - Configure
 extension LockSettingVC {
-    private func configureNaviBar() {
-        naviBar.configureNaviBar(targetVC: self, title: "화면 잠금")
-        naviBar.configureBackBtn(targetVC: self, action: #selector(popVC), naviType: .push)
-    }
-    
     private func configureContentView() {
         view.backgroundColor = .systemBackground
-        addGesturelockGesture()
+        
+        configureNaviBar()
+        configureLayout()
+    }
+
+    private func configureNaviBar() {
+        naviBar.configureNaviBar(targetVC: self, title: "화면 잠금")
+        naviBar.configureBackBtn(targetVC: self, action: #selector(dismissVC), naviType: .present)
     }
     
     private func configureLayout() {
@@ -80,15 +85,35 @@ extension LockSettingVC {
     }
 }
 
+// MARK: - Bind
+extension LockSettingVC {
+    private func bindUI() {
+        lockSwitch.rx.isOn
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.showLockVC()
+            })
+            .disposed(by: bag)
+        
+        lockView.rx.tapGesture()
+            .when(.ended)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.lockSwitch.setOn(!self.lockSwitch.isOn, animated: true)
+                self.showLockVC()
+            })
+            .disposed(by: bag)
+    }
+}
+
 // MARK: - Custom Methods
 extension LockSettingVC {
-    private func addGesturelockGesture() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTaplockView))
-        lockView.addGestureRecognizer(gesture)
-    }
-    
-    @objc func didTaplockView() {
-        lockSwitch.setOn(!lockSwitch.isOn, animated: true)
+    private func showLockVC() {
+        if lockSwitch.isOn {
+            let lockVC = LockVC()
+            lockVC.modalPresentationStyle = .overFullScreen
+            present(lockVC, animated: true, completion: nil)
+        }
     }
 }
 
