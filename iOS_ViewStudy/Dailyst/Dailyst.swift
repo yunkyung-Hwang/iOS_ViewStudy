@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import Then
 import Photos
+import Alamofire
 
 class Dailyst: UIViewController {
     private var playerBaseImage = UIImageView()
@@ -97,6 +98,7 @@ class Dailyst: UIViewController {
         configureEmotionStackView()
         configurePlayer()
         configureURL()
+        didTapSearchView()
     }
 }
 
@@ -259,6 +261,34 @@ extension Dailyst {
             $0.leading.equalToSuperview().offset(30)
             $0.trailing.equalToSuperview().offset(-30)
             $0.height.equalTo(80)
+        }
+    }
+    
+    private func didTapSearchView() {
+        searchBtn.addTarget(self, action: #selector(searchYoutube), for: .touchUpInside)
+    }
+    
+    @objc func searchYoutube() {
+        var optionParams: Parameters {
+            return [
+                "q": String(describing: urlSearchTextField.text),
+                "part": "snippet",
+                "key": "API Key",
+                "type": "video",
+                "maxResults": 3,
+                "regionCode": "KR"
+            ]
+        }
+        
+        let url = "https://www.googleapis.com/youtube/v3/search?"
+        AF.request(url,
+                   method: .get,
+                   parameters: optionParams,
+                   encoding: URLEncoding.default,
+                   headers: ["Content-Type":"application/json", "Accept":"application/json"])
+            .validate(statusCode: 200..<300)
+            .responseJSON { (json) in
+                dump(json)
         }
     }
 }
