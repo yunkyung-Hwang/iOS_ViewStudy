@@ -265,7 +265,20 @@ extension Dailyst {
     }
     
     private func didTapSearchView() {
-        searchBtn.addTarget(self, action: #selector(searchYoutube), for: .touchUpInside)
+        searchBtn.addTarget(self, action: #selector(searchURL), for: .touchUpInside)
+    }
+    
+    @objc func searchURL() {
+        let url = "http://www.youtube.com/oembed?url=\(urlSearchTextField.text ?? "")&format=json"
+        AF.request(url,
+                   method: .get,
+                   parameters: nil,
+                   encoding: URLEncoding.default,
+                   headers: ["Content-Type":"application/json", "Accept":"application/json"])
+            .validate(statusCode: 200..<300)
+            .responseJSON { (json) in
+                dump(json)
+            }
     }
     
     @objc func searchYoutube() {
