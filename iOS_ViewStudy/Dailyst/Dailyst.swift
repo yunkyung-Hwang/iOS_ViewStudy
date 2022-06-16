@@ -265,7 +265,7 @@ extension Dailyst {
     }
     
     private func didTapSearchView() {
-        searchBtn.addTarget(self, action: #selector(searchURL), for: .touchUpInside)
+        searchBtn.addTarget(self, action: #selector(getURLMetaData), for: .touchUpInside)
     }
     
     @objc func searchURL() {
@@ -303,6 +303,25 @@ extension Dailyst {
             .responseJSON { (json) in
                 dump(json)
         }
+    }
+    
+    @objc func getURLMetaData() {
+//        let url = NSURL(string: String(describing: urlSearchTextField.text))
+        let url = NSURL(string: "https://theawesome.tistory.com/4")
+
+        let session = URLSession.shared
+
+        let task = session.dataTask(with: url! as URL, completionHandler: { data, response, error in
+            if error == nil {
+                let urlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+//                print(urlContent ?? "No contents foind!!!")
+                dump(urlContent)
+            } else {
+                print("error")
+            }
+        })
+
+        task.resume()
     }
 }
 
