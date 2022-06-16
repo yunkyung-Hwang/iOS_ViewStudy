@@ -25,6 +25,7 @@ PODS:
   - SideMenu (6.5.0)
   - SnapKit (5.0.1)
   - SteviaLayout (4.7.3)
+  - SwiftSoup (2.4.3)
   - Tabman (2.11.1):
     - Pageboy (~> 3.6.0)
   - Then (2.7.0)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - RxSwift (< 6.2.0)
   - SideMenu
   - SnapKit (~> 5.0.0)
+  - SwiftSoup
   - Tabman (~> 2.9)
   - YPImagePicker
 
@@ -59,6 +61,7 @@ SPEC REPOS:
     - SideMenu
     - SnapKit
     - SteviaLayout
+    - SwiftSoup
     - Tabman
     - Then
     - YPImagePicker
@@ -77,10 +80,11 @@ SPEC CHECKSUMS:
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  SwiftSoup: 3384f2e618cfc1b3cbc7852c16692fe8de13fb8f
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: d9796e2fbc1918fee620d4dccbd06c11d09641ae
+PODFILE CHECKSUM: fde90a836f642093b530585780cf63972aac39a7
 
 COCOAPODS: 1.11.2

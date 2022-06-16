@@ -10,6 +10,7 @@ import SnapKit
 import Then
 import Photos
 import Alamofire
+import SwiftSoup
 
 class Dailyst: UIViewController {
     private var playerBaseImage = UIImageView()
@@ -269,6 +270,7 @@ extension Dailyst {
     }
     
     @objc func searchURL() {
+        // 유튜브
         let url = "http://www.youtube.com/oembed?url=\(urlSearchTextField.text ?? "")&format=json"
         AF.request(url,
                    method: .get,
@@ -306,22 +308,22 @@ extension Dailyst {
     }
     
     @objc func getURLMetaData() {
-//        let url = NSURL(string: String(describing: urlSearchTextField.text))
-        let url = NSURL(string: "https://theawesome.tistory.com/4")
-
-        let session = URLSession.shared
-
-        let task = session.dataTask(with: url! as URL, completionHandler: { data, response, error in
-            if error == nil {
-                let urlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-//                print(urlContent ?? "No contents foind!!!")
-                dump(urlContent)
-            } else {
-                print("error")
-            }
-        })
-
-        task.resume()
+        // 인스타, 블로그
+        let urlString = "https://www.instagram.com/p/Ce3aKcXP6Lo/?igshid=YmMyMTA2M2Y="
+        
+        let url = URL(string: urlString)!
+        do {
+            let html = try String(contentsOf: url)
+            let doc: Document = try SwiftSoup.parse(html)
+            let title: String? = try doc.head()?.select("meta[property=og:title]").first()?.attr("content")
+            let thumbnailURL: String? = try doc.head()?.select("meta[property=og:image]").first()?.attr("content")
+            let mediaURL: String? = try doc.head()?.select("meta[property=og:url]").first()?.attr("content")
+            print(title ?? "")
+            print(thumbnailURL ?? "")
+            print(mediaURL ?? "")
+        } catch {
+            print("error")
+        }
     }
 }
 

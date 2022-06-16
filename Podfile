@@ -12,6 +12,7 @@ target 'iOS_ViewStudy' do
   pod 'YPImagePicker'
   pod 'SnapKit', '~> 5.0.0'
   pod 'PhotoCropper'
+  pod 'SwiftSoup'
 
 
   # Rx
