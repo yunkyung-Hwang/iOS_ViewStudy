@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 extension UIApplication {
     class func topViewController(base: UIViewController? = UIWindow.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {

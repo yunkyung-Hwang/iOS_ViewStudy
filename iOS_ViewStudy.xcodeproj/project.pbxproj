@@ -82,6 +82,10 @@
 		23F0138C27A1488800C87399 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0138B27A1488800C87399 /* CoinData.swift */; };
 		23F7540D286F216A002CEF45 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7540C286F216A002CEF45 /* UIApplication+.swift */; };
 		23F7540F286F2193002CEF45 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7540E286F2193002CEF45 /* UIWindow+.swift */; };
+		23F75412286F22F0002CEF45 /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F75411286F22F0002CEF45 /* UIDevice+.swift */; };
+		23F75414286F233C002CEF45 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F75413286F233C002CEF45 /* UILabel+.swift */; };
+		23F75416286F235D002CEF45 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F75415286F235D002CEF45 /* UITextView+.swift */; };
+		23F75418286F2377002CEF45 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F75417286F2377002CEF45 /* UIView+.swift */; };
 		23FF818B283BCF53002FEAA8 /* UIVIewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */; };
 		23FF818D283BCFFC002FEAA8 /* NaviType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF818C283BCFFC002FEAA8 /* NaviType.swift */; };
 		23FF8191283BD1C5002FEAA8 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF8190283BD1C5002FEAA8 /* MyPage.swift */; };
@@ -169,6 +173,10 @@
 		23F0138B27A1488800C87399 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		23F7540C286F216A002CEF45 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		23F7540E286F2193002CEF45 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
+		23F75411286F22F0002CEF45 /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
+		23F75413286F233C002CEF45 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		23F75415286F235D002CEF45 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
+		23F75417286F2377002CEF45 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+.swift"; sourceTree = "<group>"; };
 		23FF818C283BCFFC002FEAA8 /* NaviType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviType.swift; sourceTree = "<group>"; };
 		23FF8190283BD1C5002FEAA8 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
@@ -376,6 +384,7 @@
 		238A3C9B277E14530009A5C9 /* iOS_ViewStudy */ = {
 			isa = PBXGroup;
 			children = (
+				23F75410286F226D002CEF45 /* Extension */,
 				239734F9282907C4003D233C /* Dailyst */,
 				2369505127D71EA100A0B01A /* CustomCamera */,
 				234D0CEF27CE9A6700E48FC5 /* YPImagePicker */,
@@ -442,15 +451,12 @@
 				2397350028295032003D233C /* DailystBase.swift */,
 				23E4E58A283BAD4000864E6D /* NavigationBar.swift */,
 				23FF818C283BCFFC002FEAA8 /* NaviType.swift */,
-				23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */,
 				23FF8190283BD1C5002FEAA8 /* MyPage.swift */,
 				23FF8192283BD231002FEAA8 /* ToastView.swift */,
 				23FF8194283BD24A002FEAA8 /* ToastType.swift */,
 				23EA90652844F4EC00D2300E /* LockVC.swift */,
 				23EA90672844F8B900D2300E /* KeypadCVC.swift */,
 				23ADD5842850AC4A003AAF4C /* LockSettingVC.swift */,
-				23F7540C286F216A002CEF45 /* UIApplication+.swift */,
-				23F7540E286F2193002CEF45 /* UIWindow+.swift */,
 			);
 			path = Dailyst;
 			sourceTree = "<group>";
@@ -534,6 +540,20 @@
 				23DC8F9D27B9356700F79EF4 /* PostTVC.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		23F75410286F226D002CEF45 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */,
+				23F7540C286F216A002CEF45 /* UIApplication+.swift */,
+				23F7540E286F2193002CEF45 /* UIWindow+.swift */,
+				23F75411286F22F0002CEF45 /* UIDevice+.swift */,
+				23F75413286F233C002CEF45 /* UILabel+.swift */,
+				23F75415286F235D002CEF45 /* UITextView+.swift */,
+				23F75417286F2377002CEF45 /* UIView+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		29D227604240368883188329 /* Frameworks */ = {
@@ -705,7 +725,9 @@
 				239A445227B37DB900D99521 /* TableViewReusableHeader.swift in Sources */,
 				2355FAE427B1751500818E37 /* StackViewWithScrollView.swift in Sources */,
 				23247FA127A94FE9005B7578 /* CommunityTVC.swift in Sources */,
+				23F75412286F22F0002CEF45 /* UIDevice+.swift in Sources */,
 				23934D3D2790632F007857D3 /* SideMenu.swift in Sources */,
+				23F75418286F2377002CEF45 /* UIView+.swift in Sources */,
 				2375000C278C62C80005C558 /* DevicePhotoCV.swift in Sources */,
 				23F7540F286F2193002CEF45 /* UIWindow+.swift in Sources */,
 				23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */,
@@ -728,6 +750,7 @@
 				231A97D6279B030A00143845 /* MenuBtnVC.swift in Sources */,
 				23DC8F9927B9315C00F79EF4 /* PostVM.swift in Sources */,
 				23FF8193283BD231002FEAA8 /* ToastView.swift in Sources */,
+				23F75416286F235D002CEF45 /* UITextView+.swift in Sources */,
 				23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */,
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
 				23552CBB27B6579D00550748 /* ITZZAAPITestVC.swift in Sources */,
@@ -743,6 +766,7 @@
 				23ADD5852850AC4A003AAF4C /* LockSettingVC.swift in Sources */,
 				23EA90682844F8B900D2300E /* KeypadCVC.swift in Sources */,
 				23247F9F27A94D36005B7578 /* ProfileHeaderView.swift in Sources */,
+				23F75414286F233C002CEF45 /* UILabel+.swift in Sources */,
 				23552CB727B6528800550748 /* PostModel.swift in Sources */,
 				238A3C9D277E14530009A5C9 /* AppDelegate.swift in Sources */,
 			);

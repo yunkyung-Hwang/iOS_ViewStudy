@@ -8,7 +8,6 @@
 import UIKit
 import Then
 import SnapKit
-import AVFoundation
 
 class LockVC: UIViewController {
     private var viewTitle = UILabel()
@@ -200,11 +199,5 @@ extension LockVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 3,
                       height: collectionView.frame.height / 4)
-    }
-}
-
-extension UIDevice {
-    static func vibrate() {
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
 }

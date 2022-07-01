@@ -74,9 +74,3 @@ class TableViewReusableHeader: UITableViewHeaderFooterView {
         NSLayoutConstraint.activate(constraints)
     }
 }
-
-extension UIView {
-    func loadViewFromNib(with xibName: String) -> UIView? {
-        return Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView
-    }
-}
