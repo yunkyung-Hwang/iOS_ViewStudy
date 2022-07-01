@@ -80,6 +80,8 @@
 		23EA90662844F4EC00D2300E /* LockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA90652844F4EC00D2300E /* LockVC.swift */; };
 		23EA90682844F8B900D2300E /* KeypadCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA90672844F8B900D2300E /* KeypadCVC.swift */; };
 		23F0138C27A1488800C87399 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0138B27A1488800C87399 /* CoinData.swift */; };
+		23F7540D286F216A002CEF45 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7540C286F216A002CEF45 /* UIApplication+.swift */; };
+		23F7540F286F2193002CEF45 /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7540E286F2193002CEF45 /* UIWindow+.swift */; };
 		23FF818B283BCF53002FEAA8 /* UIVIewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */; };
 		23FF818D283BCFFC002FEAA8 /* NaviType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF818C283BCFFC002FEAA8 /* NaviType.swift */; };
 		23FF8191283BD1C5002FEAA8 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF8190283BD1C5002FEAA8 /* MyPage.swift */; };
@@ -165,6 +167,8 @@
 		23EA90652844F4EC00D2300E /* LockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockVC.swift; sourceTree = "<group>"; };
 		23EA90672844F8B900D2300E /* KeypadCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadCVC.swift; sourceTree = "<group>"; };
 		23F0138B27A1488800C87399 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		23F7540C286F216A002CEF45 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		23F7540E286F2193002CEF45 /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		23FF818A283BCF53002FEAA8 /* UIVIewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+.swift"; sourceTree = "<group>"; };
 		23FF818C283BCFFC002FEAA8 /* NaviType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviType.swift; sourceTree = "<group>"; };
 		23FF8190283BD1C5002FEAA8 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
@@ -445,6 +449,8 @@
 				23EA90652844F4EC00D2300E /* LockVC.swift */,
 				23EA90672844F8B900D2300E /* KeypadCVC.swift */,
 				23ADD5842850AC4A003AAF4C /* LockSettingVC.swift */,
+				23F7540C286F216A002CEF45 /* UIApplication+.swift */,
+				23F7540E286F2193002CEF45 /* UIWindow+.swift */,
 			);
 			path = Dailyst;
 			sourceTree = "<group>";
@@ -701,6 +707,7 @@
 				23247FA127A94FE9005B7578 /* CommunityTVC.swift in Sources */,
 				23934D3D2790632F007857D3 /* SideMenu.swift in Sources */,
 				2375000C278C62C80005C558 /* DevicePhotoCV.swift in Sources */,
+				23F7540F286F2193002CEF45 /* UIWindow+.swift in Sources */,
 				23934D452790683D007857D3 /* CustomSideMenuNC.swift in Sources */,
 				23190FBF279C1727000F96DF /* TransformViewToImageVC.swift in Sources */,
 				23190FC4279C5512000F96DF /* OnboardingVC.swift in Sources */,
@@ -714,6 +721,7 @@
 				239A0B53279DA829000A2567 /* BasicCVC.swift in Sources */,
 				2369505327D71EE000A0B01A /* CustomCameraVC.swift in Sources */,
 				23DC8F9E27B9356700F79EF4 /* PostTVC.swift in Sources */,
+				23F7540D286F216A002CEF45 /* UIApplication+.swift in Sources */,
 				23247FA327A95AAE005B7578 /* CellFooterView.swift in Sources */,
 				23CF06B227AEC2C200E81F4C /* PostFeedVC.swift in Sources */,
 				23E4E58B283BAD4000864E6D /* NavigationBar.swift in Sources */,
