@@ -67,7 +67,7 @@
 		23A261AC27A106A00052D244 /* ByteCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261AB27A106A00052D244 /* ByteCoinVC.swift */; };
 		23A261B227A112EF0052D244 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A261B127A112EF0052D244 /* CoinManager.swift */; };
 		23ADD5852850AC4A003AAF4C /* LockSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADD5842850AC4A003AAF4C /* LockSettingVC.swift */; };
-		23C91828287A6A20004895D3 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C91827287A6A20004895D3 /* MapKitView.swift */; };
+		23C91828287A6A20004895D3 /* MapkitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C91827287A6A20004895D3 /* MapkitView.swift */; };
 		23CB9EBA27ACEC1B00BC0F97 /* ButtonCustom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CB9EB927ACEC1B00BC0F97 /* ButtonCustom.storyboard */; };
 		23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB9EBB27ACEC3100BC0F97 /* ButtonCustomVC.swift */; };
 		23CF06AE27AEC16200E81F4C /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CF06AD27AEC16200E81F4C /* CategoryVC.swift */; };
@@ -159,7 +159,7 @@
 		23A261AB27A106A00052D244 /* ByteCoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteCoinVC.swift; sourceTree = "<group>"; };
 		23A261B127A112EF0052D244 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 		23ADD5842850AC4A003AAF4C /* LockSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockSettingVC.swift; sourceTree = "<group>"; };
-		23C91827287A6A20004895D3 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
+		23C91827287A6A20004895D3 /* MapkitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapkitView.swift; sourceTree = "<group>"; };
 		23CB9EB927ACEC1B00BC0F97 /* ButtonCustom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ButtonCustom.storyboard; sourceTree = "<group>"; };
 		23CB9EBB27ACEC3100BC0F97 /* ButtonCustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCustomVC.swift; sourceTree = "<group>"; };
 		23CF06AD27AEC16200E81F4C /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
@@ -523,7 +523,7 @@
 		23C91826287A6A02004895D3 /* MapkitTest */ = {
 			isa = PBXGroup;
 			children = (
-				23C91827287A6A20004895D3 /* MapKitView.swift */,
+				23C91827287A6A20004895D3 /* MapkitView.swift */,
 			);
 			path = MapkitTest;
 			sourceTree = "<group>";
@@ -763,7 +763,7 @@
 				23FF8193283BD231002FEAA8 /* ToastView.swift in Sources */,
 				23F75416286F235D002CEF45 /* UITextView+.swift in Sources */,
 				23CB9EBC27ACEC3100BC0F97 /* ButtonCustomVC.swift in Sources */,
-				23C91828287A6A20004895D3 /* MapKitView.swift in Sources */,
+				23C91828287A6A20004895D3 /* MapkitView.swift in Sources */,
 				239A0B4F279DA436000A2567 /* CollectionViewBasicVC.swift in Sources */,
 				23552CBB27B6579D00550748 /* ITZZAAPITestVC.swift in Sources */,
 				23CF06AE27AEC16200E81F4C /* CategoryVC.swift in Sources */,

@@ -7,13 +7,17 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 import Then
 import SnapKit
 
 class MapkitView: UIViewController {
     private var mapView = MKMapView()
         .then {
+            $0.mapType = .standard
+            $0.setUserTrackingMode(.followWithHeading, animated: true)
             $0.showsUserLocation = true
+            $0.isZoomEnabled = true
         }
     
     private var locationManager = CLLocationManager()
@@ -29,12 +33,28 @@ class MapkitView: UIViewController {
             $0.requestAlwaysAuthorization()
             // 위치 보기 설정
             $0.startUpdatingLocation()
+            $0.activityType = .fitness
         }
+    
+    private var previousCoordinate: CLLocationCoordinate2D?
+    private var track: [CLLocation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
         configureLayout()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingHeading()
+    }
+    
+    /// 메모리 경고를 수신할 경우 뷰 컨트롤러로 전송
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
 
@@ -43,6 +63,7 @@ extension MapkitView {
     private func configureView() {
         view.addSubview(mapView)
         locationManager.delegate = self
+        mapView.delegate = self
     }
 }
 
@@ -79,11 +100,45 @@ extension MapkitView: CLLocationManagerDelegate {
     // 이동 시 처리 함수
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {return}
+        let latitude = location.coordinate.latitude
+        let longtitude = location.coordinate.longitude
         
         // 현재 위치로 이동
         _ = goLocation(latitudeValue: location.coordinate.latitude,
                        longtudeValue: location.coordinate.longitude,
                        delta: 0.01)
-        locationManager.stopUpdatingLocation()
+        
+        track.append(locations[0])
+        
+        // 이동 경로 그리기
+        if let previousCoordinate = previousCoordinate {
+            var points: [CLLocationCoordinate2D] = []
+            let point1 = CLLocationCoordinate2DMake(previousCoordinate.latitude, previousCoordinate.longitude)
+            let point2: CLLocationCoordinate2D
+            = CLLocationCoordinate2DMake(latitude, longtitude)
+            points.append(point1)
+            points.append(point2)
+            let lineDraw = MKPolyline(coordinates: points, count:points.count)
+            // func mapView(...rendererFor overlay: MKOverlay...) -> MKOverlayRenderer 함수 호출
+            mapView.addOverlay(lineDraw)
+        }
+        previousCoordinate = location.coordinate
+    }
+}
+
+extension MapkitView: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = .blue
+            renderer.lineWidth = 10
+            renderer.alpha = 1
+            renderer.createPath()
+            
+            return renderer
+        } else {
+            print("영역을 그릴 수 없습니다")
+            return MKOverlayRenderer()
+        }
     }
 }
