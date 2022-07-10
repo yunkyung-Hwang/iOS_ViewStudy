@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //YPImagePicker
-//        let root = YPImagePickerTest()
-//        self.window?.rootViewController = root
+        let root = MapkitView()
+        self.window?.rootViewController = root
         return true
     }
 
@@ -28,9 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        let lockVC = LockVC()
-        lockVC.modalPresentationStyle = .fullScreen
-        UIApplication.topViewController(base: window?.rootViewController)?.present(lockVC, animated: true)
+        
+//        let lockVC = LockVC()
+//        lockVC.modalPresentationStyle = .fullScreen
+//        UIApplication.topViewController(base: window?.rootViewController)?.present(lockVC, animated: true)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
