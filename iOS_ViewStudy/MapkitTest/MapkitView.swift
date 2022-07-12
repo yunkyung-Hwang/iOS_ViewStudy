@@ -10,6 +10,8 @@ import MapKit
 import CoreLocation
 import Then
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class MapkitView: UIViewController {
     private var mapView = MKMapView()
@@ -17,6 +19,7 @@ class MapkitView: UIViewController {
             $0.mapType = .standard
             $0.setUserTrackingMode(.followWithHeading, animated: true)
             $0.showsUserLocation = true
+            $0.showsTraffic = false
             $0.isZoomEnabled = true
         }
     
@@ -36,13 +39,24 @@ class MapkitView: UIViewController {
             $0.activityType = .fitness
         }
     
+    private var calculateAreaBtn = UIButton()
+        .then {
+            $0.setTitle("면적 계산!", for: .normal)
+            $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
+            $0.layer.cornerRadius = 10
+        }
+    
     private var previousCoordinate: CLLocationCoordinate2D?
-    private var track: [CLLocation] = []
+    private var track: [CLLocationCoordinate2D] = []
+    private var bag = DisposeBag()
+    
+    let kEarthRadius = 6378137.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
+        configureMap()
         configureLayout()
+        calculateArea()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,10 +74,17 @@ class MapkitView: UIViewController {
 
 // MARK: - Configure
 extension MapkitView {
-    private func configureView() {
+    private func configureMap() {
         view.addSubview(mapView)
         locationManager.delegate = self
         mapView.delegate = self
+        
+        // 현재 위치로 이동
+        _ = goLocation(latitudeValue: locationManager.location?.coordinate.latitude ?? 0,
+                       longtudeValue: locationManager.location?.coordinate.longitude ?? 0,
+                       delta: 0.01)
+        
+        view.addSubview(calculateAreaBtn)
     }
 }
 
@@ -73,9 +94,46 @@ extension MapkitView {
         mapView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        calculateAreaBtn.snp.makeConstraints {
+            $0.bottom.equalToSuperview().offset(-30)
+            $0.trailing.equalToSuperview().offset(-30)
+        }
     }
 }
 
+// MARK: - bind
+extension MapkitView {
+    private func calculateArea() {
+        calculateAreaBtn.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                print("area: ", self.regionArea(locations: self.track))
+            })
+            .disposed(by: bag)
+    }
+    
+    func radians(degrees: Double) -> Double {
+        return degrees * .pi / 180
+    }
+
+    func regionArea(locations: [CLLocationCoordinate2D]) -> Double {
+
+        guard locations.count > 2 else { return 0 }
+        var area = 0.0
+
+        for i in 0..<locations.count {
+            let p1 = locations[i > 0 ? i - 1 : locations.count - 1]
+            let p2 = locations[i]
+
+            area += radians(degrees: p2.longitude - p1.longitude) * (2 + sin(radians(degrees: p1.latitude)) + sin(radians(degrees: p2.latitude)) )
+        }
+        area = -(area * kEarthRadius * kEarthRadius / 2)
+        return max(area, -area)
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
 extension MapkitView: CLLocationManagerDelegate {
     /// 위도, 경도, 스팬(영역 폭)을 입력받아 지도에 표시
     func goLocation(latitudeValue: CLLocationDegrees,
@@ -102,23 +160,14 @@ extension MapkitView: CLLocationManagerDelegate {
         guard let location = locations.last else {return}
         let latitude = location.coordinate.latitude
         let longtitude = location.coordinate.longitude
-        
-        // 현재 위치로 이동
-        _ = goLocation(latitudeValue: location.coordinate.latitude,
-                       longtudeValue: location.coordinate.longitude,
-                       delta: 0.01)
-        
-        track.append(locations[0])
-        
+
         // 이동 경로 그리기
         if let previousCoordinate = previousCoordinate {
-            var points: [CLLocationCoordinate2D] = []
             let point1 = CLLocationCoordinate2DMake(previousCoordinate.latitude, previousCoordinate.longitude)
-            let point2: CLLocationCoordinate2D
-            = CLLocationCoordinate2DMake(latitude, longtitude)
-            points.append(point1)
-            points.append(point2)
-            let lineDraw = MKPolyline(coordinates: points, count:points.count)
+            let point2 = CLLocationCoordinate2DMake(latitude, longtitude)
+            track.append(point1)
+            track.append(point2)
+            let lineDraw = MKPolyline(coordinates: track, count:track.count)
             // func mapView(...rendererFor overlay: MKOverlay...) -> MKOverlayRenderer 함수 호출
             mapView.addOverlay(lineDraw)
         }
